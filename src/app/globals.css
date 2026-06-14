@@ -1,26 +1,101 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-ocean: #0EA5E9;
+  --color-ocean-dark: #0077B6;
+  --color-navy: #1A4A6E;
+  --color-sun: #F59E0B;
+  --color-sand: #FFF8EE;
+  --color-sky-bg: #E0F2FE;
+  --color-text: #1E3A5F;
+  --color-text-sub: #4A7FA5;
+  --color-line: #06C755;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: #1E3A5F;
+  font-family: 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', sans-serif;
+  background: #fff;
 }
+
+/* ── Hero wave ── */
+.hero-wave svg { display: block; }
+
+/* ── Photo hover ── */
+.gallery-item { overflow: hidden; border-radius: 12px; position: relative; }
+.gallery-item img { transition: transform 0.45s ease; width: 100%; height: 100%; object-fit: cover; display: block; }
+.gallery-item:hover img { transform: scale(1.06); }
+.gallery-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 32px 14px 12px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.45));
+  color: #fff; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em;
+}
+
+/* ── Scroll arrow ── */
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0) translateX(-50%); }
+  50%       { transform: translateY(8px) translateX(-50%); }
+}
+.scroll-arrow { animation: bounce-down 1.6s infinite; }
+
+/* ── LINE pulse ── */
+@keyframes pulse-line {
+  0%, 100% { box-shadow: 0 4px 20px rgba(6,199,85,0.4); }
+  50%       { box-shadow: 0 4px 32px rgba(6,199,85,0.1); }
+}
+.float-line { animation: pulse-line 2.5s infinite; }
+
+/* ── Feature card border ── */
+.feature-card { border-left: 3px solid #0EA5E9; }
+
+/* ── Gallery grid ── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 200px 200px;
+  gap: 10px;
+}
+.gallery-big  { grid-column: span 2; grid-row: span 2; }
+.gallery-wide { grid-column: span 2; }
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 160px);
+  }
+  .gallery-big  { grid-column: span 2; grid-row: span 1; }
+  .gallery-wide { grid-column: span 2; }
+}
+
+/* ── Pricing card ── */
+.pricing-featured {
+  background: linear-gradient(135deg, #0EA5E9, #0077B6);
+  border-color: #0EA5E9;
+  color: #fff;
+}
+
+/* ── Special rates table ── */
+.sr-table th { background: #0EA5E9; color: #fff; }
+.sr-table tr:nth-child(even) td { background: #f0f9ff; }
+
+/* ── Booking form ── */
+.form-input {
+  border: 1px solid #dde8f0; border-radius: 6px;
+  padding: 11px 14px; font-size: 0.95rem;
+  width: 100%; font-family: inherit;
+  transition: border-color 0.2s;
+  outline: none;
+}
+.form-input:focus { border-color: #0EA5E9; }
+
+/* ── Nav scrolled ── */
+.nav-scrolled {
+  background: rgba(255,255,255,0.97) !important;
+  box-shadow: 0 2px 20px rgba(14,165,233,0.12);
+}
+.nav-scrolled .nav-link  { color: #1A4A6E !important; }
+.nav-scrolled .nav-logo  { color: #0EA5E9 !important; }
+.nav-scrolled .lang-btn  { border-color: #0EA5E9 !important; color: #0EA5E9 !important; }
