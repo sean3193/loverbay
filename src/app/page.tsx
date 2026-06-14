@@ -338,12 +338,12 @@ const T: Record<Lang, Record<string, string>> = {
    사진 목록
 ══════════════════════════════════════════ */
 const GALLERY = [
-  { src: '/photos/海岸空拍.webp',     alt: '海岸全景',   label: 'gallery.label1', cls: 'gallery-big' },
-  { src: '/photos/海景陽台夜.webp',   alt: '夜景陽台',   label: 'gallery.label2', cls: '' },
-  { src: '/photos/海景陽台4.jpg',     alt: '戶外陽台',   label: 'gallery.label3', cls: 'gallery-wide' },
-  { src: '/photos/海景內客廳.jpg',    alt: '海景客廳',   label: 'gallery.label4', cls: '' },
-  { src: '/photos/海景床.webp',       alt: '海景臥室',   label: 'gallery.label5', cls: '' },
-  { src: '/photos/廚房瓦斯爐.jpg',   alt: '全套廚房',   label: 'gallery.label6', cls: '' },
+  { src: '/photos/aerial-coast.webp',  alt: '海岸全景',   label: 'gallery.label1', cls: 'gallery-big' },
+  { src: '/photos/balcony-night.webp', alt: '夜景陽台',   label: 'gallery.label2', cls: '' },
+  { src: '/photos/balcony-4.jpg',      alt: '戶外陽台',   label: 'gallery.label3', cls: 'gallery-wide' },
+  { src: '/photos/seaview-living.jpg', alt: '海景客廳',   label: 'gallery.label4', cls: '' },
+  { src: '/photos/seaview-bed.webp',   alt: '海景臥室',   label: 'gallery.label5', cls: '' },
+  { src: '/photos/kitchen.jpg',        alt: '全套廚房',   label: 'gallery.label6', cls: '' },
 ]
 const GALLERY_LABELS: Record<Lang, Record<string, string>> = {
   zh: { 'gallery.label1': '海岸全景', 'gallery.label2': '夜景陽台', 'gallery.label3': '戶外陽台', 'gallery.label4': '海景客廳', 'gallery.label5': '海景臥室', 'gallery.label6': '全套廚房' },
@@ -416,7 +416,7 @@ export default function Home() {
       <section id="hero" className="relative h-screen flex items-center justify-center text-center overflow-hidden">
         {/* 真實海景照片背景 */}
         <Image
-          src="/photos/門口走去海灘.jpg"
+          src="/photos/hero-beach.jpg"
           alt="灣灣拾光海景"
           fill
           priority
@@ -476,7 +476,7 @@ export default function Home() {
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-xl h-96 relative">
-            <Image src="/photos/海景陽台2.webp" alt="灣灣拾光海景" fill className="object-cover" />
+            <Image src="/photos/balcony-2.webp" alt="灣灣拾光海景" fill className="object-cover" />
           </div>
         </div>
       </section>
@@ -507,7 +507,7 @@ export default function Home() {
         <div className="max-w-lg">
           <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform">
             <div className="relative h-56">
-              <Image src="/photos/海景陽台4.jpg" alt="日租包棟" fill className="object-cover" />
+              <Image src="/photos/balcony-4.jpg" alt="日租包棟" fill className="object-cover" />
               <span className="absolute top-3 left-3 text-xs font-bold text-white px-3 py-1 rounded z-10" style={{ background: '#0EA5E9' }}>
                 {t('space.badge')}
               </span>
