@@ -641,7 +641,7 @@ export default function Home() {
         <p className="text-xs font-bold tracking-[0.3em] uppercase mb-3" style={{ color: '#0EA5E9' }}>Reservation</p>
         <h2 className="font-black mb-3" style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', color: '#1E3A5F' }}>{t('book.title')}</h2>
         <p className="mb-10" style={{ color: '#4A7FA5' }}>{t('book.desc')}</p>
-        <div className="grid lg:grid-cols-[1fr_380px] gap-8 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* 左欄：表單 */}
           <div className="bg-white rounded-2xl p-8 shadow-md">
             <div className="grid md:grid-cols-2 gap-5 mb-5">
