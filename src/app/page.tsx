@@ -346,17 +346,16 @@ const GALLERY = [
   { src: `${BASE}/photos/seaview-living.jpg`, alt: '海景客廳',   label: 'gallery.label4',  cls: '' },
   { src: `${BASE}/photos/seaview-bed.webp`,   alt: '海景臥室',   label: 'gallery.label5',  cls: '' },
   { src: `${BASE}/photos/kitchen.jpg`,        alt: '全套廚房',   label: 'gallery.label6',  cls: '' },
-  { src: `${BASE}/photos/room-twin.jpg`,      alt: '四人房',     label: 'gallery.label7',  cls: 'gallery-wide', pos: 'object-contain', bg: '#2a2a2a' },
+  { src: `${BASE}/photos/room-twin.jpg`,      alt: '四人房',     label: 'gallery.label7',  cls: '' },
   { src: `${BASE}/photos/room-double.jpg`,    alt: '雙人房',     label: 'gallery.label8',  cls: '' },
   { src: `${BASE}/photos/bathroom.jpg`,       alt: '衛浴空間',   label: 'gallery.label9',  cls: '' },
   { src: `${BASE}/photos/room-single.webp`,   alt: '單人房',     label: 'gallery.label10', cls: '' },
-  { src: `${BASE}/photos/kitchen2.jpg`,       alt: '廚房設備',   label: 'gallery.label11', cls: '' },
 ]
 const GALLERY_LABELS: Record<Lang, Record<string, string>> = {
-  zh: { 'gallery.label1': '海岸全景', 'gallery.label2': '夜景陽台', 'gallery.label3': '戶外陽台', 'gallery.label4': '海景客廳', 'gallery.label5': '海景臥室', 'gallery.label6': '全套廚房', 'gallery.label7': '四人房', 'gallery.label8': '雙人房', 'gallery.label9': '衛浴空間', 'gallery.label10': '單人房', 'gallery.label11': '廚房設備' },
-  en: { 'gallery.label1': 'Coastal View', 'gallery.label2': 'Night Terrace', 'gallery.label3': 'Outdoor Deck', 'gallery.label4': 'Ocean Living Room', 'gallery.label5': 'Ocean Bedroom', 'gallery.label6': 'Full Kitchen', 'gallery.label7': 'Twin Room', 'gallery.label8': 'Double Room', 'gallery.label9': 'Bathroom', 'gallery.label10': 'Single Room', 'gallery.label11': 'Kitchen Equipment' },
-  ja: { 'gallery.label1': '海岸パノラマ', 'gallery.label2': 'ナイトテラス', 'gallery.label3': 'アウトドアデッキ', 'gallery.label4': 'オーシャンリビング', 'gallery.label5': 'オーシャンベッドルーム', 'gallery.label6': 'フルキッチン', 'gallery.label7': '4人部屋', 'gallery.label8': 'ダブルルーム', 'gallery.label9': 'バスルーム', 'gallery.label10': 'シングルルーム', 'gallery.label11': 'キッチン設備' },
-  ko: { 'gallery.label1': '해안 전경', 'gallery.label2': '야경 테라스', 'gallery.label3': '야외 데크', 'gallery.label4': '오션뷰 거실', 'gallery.label5': '오션뷰 침실', 'gallery.label6': '풀 주방', 'gallery.label7': '4인실', 'gallery.label8': '더블룸', 'gallery.label9': '욕실', 'gallery.label10': '싱글룸', 'gallery.label11': '주방 시설' },
+  zh: { 'gallery.label1': '海岸全景', 'gallery.label2': '夜景陽台', 'gallery.label3': '戶外陽台', 'gallery.label4': '海景客廳', 'gallery.label5': '海景臥室', 'gallery.label6': '全套廚房', 'gallery.label7': '四人房', 'gallery.label8': '雙人房', 'gallery.label9': '衛浴空間', 'gallery.label10': '單人房' },
+  en: { 'gallery.label1': 'Coastal View', 'gallery.label2': 'Night Terrace', 'gallery.label3': 'Outdoor Deck', 'gallery.label4': 'Ocean Living Room', 'gallery.label5': 'Ocean Bedroom', 'gallery.label6': 'Full Kitchen', 'gallery.label7': 'Twin Room', 'gallery.label8': 'Double Room', 'gallery.label9': 'Bathroom', 'gallery.label10': 'Single Room' },
+  ja: { 'gallery.label1': '海岸パノラマ', 'gallery.label2': 'ナイトテラス', 'gallery.label3': 'アウトドアデッキ', 'gallery.label4': 'オーシャンリビング', 'gallery.label5': 'オーシャンベッドルーム', 'gallery.label6': 'フルキッチン', 'gallery.label7': '4人部屋', 'gallery.label8': 'ダブルルーム', 'gallery.label9': 'バスルーム', 'gallery.label10': 'シングルルーム' },
+  ko: { 'gallery.label1': '해안 전경', 'gallery.label2': '야경 테라스', 'gallery.label3': '야외 데크', 'gallery.label4': '오션뷰 거실', 'gallery.label5': '오션뷰 침실', 'gallery.label6': '풀 주방', 'gallery.label7': '4인실', 'gallery.label8': '더블룸', 'gallery.label9': '욕실', 'gallery.label10': '싱글룸' },
 }
 
 /* ══════════════════════════════════════════
