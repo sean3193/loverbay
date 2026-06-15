@@ -562,7 +562,6 @@ export default function Home() {
               ))}
             </div>
             <div className="flex items-center gap-4">
-              <span className="text-sm" style={{ color: '#9CB3C9' }}>{t('space.hint')}</span>
               <a href="#booking" className="font-bold text-sm text-white px-6 py-3 rounded-full no-underline hover:-translate-y-0.5 transition-transform" style={{ background: '#0EA5E9' }}>
                 {t('space.cta')}
               </a>
