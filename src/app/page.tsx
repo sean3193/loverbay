@@ -87,7 +87,7 @@ const T: Record<Lang, Record<string, string>> = {
     'line.book.id': 'LINE ID：',
     'line.or': '或',
     'ft.desc': '宜蘭海岸第一排的私密包場空間，讓每一個到訪的時光都值得被珍藏。',
-    'ft.addr': '📍 宜蘭縣（確切地址請詢問）',
+    'ft.addr': '📍 宜蘭縣蘇澳鎮造船路102號',
     'ft.tel': '請洽 LINE',
     'ft.nav': '快速導覽', 'ft.contact': '聯絡我們',
     'ft.privacy': '隱私權政策', 'ft.line.acc': 'LINE 官方帳號',
@@ -167,7 +167,7 @@ const T: Record<Lang, Record<string, string>> = {
     'line.book.id': 'LINE ID: ',
     'line.or': 'or',
     'ft.desc': 'A private oceanfront retreat on Yilan\'s first-row beachfront — where every visit becomes a memory worth keeping.',
-    'ft.addr': '📍 Yilan County (address shared upon booking)',
+    'ft.addr': '📍 No.102, Zaochuan Rd., Su-ao, Yilan County',
     'ft.tel': 'Contact via LINE',
     'ft.nav': 'Quick Links', 'ft.contact': 'Contact Us',
     'ft.privacy': 'Privacy Policy', 'ft.line.acc': 'LINE Official Account',
@@ -247,7 +247,7 @@ const T: Record<Lang, Record<string, string>> = {
     'line.book.id': 'LINE ID：',
     'line.or': 'または',
     'ft.desc': '宜蘭海岸最前列のプライベート貸切空間。すべての訪問が忘れられない思い出になります。',
-    'ft.addr': '📍 宜蘭県（住所は予約確認後にご案内）',
+    'ft.addr': '📍 宜蘭県蘇澳鎮造船路102号',
     'ft.tel': 'LINEでお問い合わせ',
     'ft.nav': 'クイックリンク', 'ft.contact': 'お問い合わせ',
     'ft.privacy': 'プライバシーポリシー', 'ft.line.acc': 'LINE公式アカウント',
@@ -327,7 +327,7 @@ const T: Record<Lang, Record<string, string>> = {
     'line.book.id': 'LINE ID: ',
     'line.or': '또는',
     'ft.desc': '이란 해안 최전선의 프라이빗 단독 공간 — 모든 방문이 소중한 추억이 되는 곳.',
-    'ft.addr': '📍 이란현 (주소는 예약 확인 후 안내)',
+    'ft.addr': '📍 이란현 쑤아오진 자오촨로 102호',
     'ft.tel': 'LINE으로 문의',
     'ft.nav': '빠른 링크', 'ft.contact': '문의하기',
     'ft.privacy': '개인정보 처리방침', 'ft.line.acc': 'LINE 공식 계정',
@@ -341,7 +341,7 @@ const T: Record<Lang, Record<string, string>> = {
 ══════════════════════════════════════════ */
 const GALLERY = [
   { src: `${BASE}/photos/aerial-coast.webp`,  alt: '海岸全景',   label: 'gallery.label1',  cls: 'gallery-big' },
-  { src: `${BASE}/photos/balcony-night.webp`, alt: '夜景陽台',   label: 'gallery.label2',  cls: '' },
+  { src: `${BASE}/photos/balcony-night.webp`, alt: '海風慢活露台', label: 'gallery.label2',  cls: '' },
   { src: `${BASE}/photos/balcony-4.jpg`,      alt: '戶外陽台',   label: 'gallery.label3',  cls: 'gallery-wide' },
   { src: `${BASE}/photos/seaview-living.jpg`, alt: '海景客廳',   label: 'gallery.label4',  cls: '' },
   { src: `${BASE}/photos/seaview-bed.webp`,   alt: '海景臥室',   label: 'gallery.label5',  cls: '' },
@@ -764,9 +764,27 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="rounded-xl h-64 flex flex-col items-center justify-center gap-3 text-sm" style={{ background: 'linear-gradient(135deg, #c8d8e8, #a8b8c8)', color: '#666' }}>
-          <span className="text-4xl">🗺️</span>
-          {t('map.ph')}
+        <div className="rounded-xl overflow-hidden shadow-md" style={{ height: '380px' }}>
+          <iframe
+            src="https://www.google.com/maps?q=宜蘭縣蘇澳鎮造船路102號&output=embed&hl=zh-TW"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+        <div className="mt-4 text-center">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=宜蘭縣蘇澳鎮造船路102號"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-bold px-6 py-3 rounded-full no-underline hover:-translate-y-0.5 transition-transform text-sm"
+            style={{ background: '#0EA5E9', color: '#fff' }}
+          >
+            📍 在 Google Maps 開啟導航
+          </a>
         </div>
       </section>
 
