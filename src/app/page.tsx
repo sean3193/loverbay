@@ -838,7 +838,7 @@ export default function Home() {
 
         <div className="rounded-xl overflow-hidden shadow-md" style={{ height: '380px' }}>
           <iframe
-            src="https://www.google.com/maps?q=宜蘭縣蘇澳鎮造船路102號&output=embed&hl=zh-TW"
+            src="https://www.google.com/maps?q=情人灣停車場&output=embed&hl=zh-TW"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -849,7 +849,7 @@ export default function Home() {
         </div>
         <div className="mt-4 text-center">
           <a
-            href="https://www.google.com/maps/search/?api=1&query=宜蘭縣蘇澳鎮造船路102號"
+            href="https://www.google.com/maps/search/?api=1&query=情人灣停車場"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 font-bold px-6 py-3 rounded-full no-underline hover:-translate-y-0.5 transition-transform text-sm"
