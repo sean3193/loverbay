@@ -704,7 +704,7 @@ export default function Home() {
             <div className="rounded-2xl p-6 text-white text-center shadow-md" style={{ background: 'linear-gradient(135deg, #06C755, #04a344)' }}>
               <div className="text-4xl mb-3">💬</div>
               <h3 className="font-black text-lg mb-2">{t('line.book.title')}</h3>
-              <p className="text-sm mb-4 opacity-90">{t('line.book.desc')}</p>
+              <p className="text-base mb-4 opacity-90">{t('line.book.desc')}</p>
               <a
                 href={LINE_URL}
                 target="_blank"
@@ -729,7 +729,7 @@ export default function Home() {
               ].map((item, i) => (
                 <div key={i} className="flex gap-2 items-start mb-3 last:mb-0">
                   <span className="flex-shrink-0">{item.icon}</span>
-                  <p className="text-xs leading-relaxed" style={{ color: '#4A7FA5' }}>{item.text}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: '#4A7FA5' }}>{item.text}</p>
                 </div>
               ))}
             </div>
