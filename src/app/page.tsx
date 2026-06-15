@@ -81,6 +81,9 @@ const T: Record<Lang, Record<string, string>> = {
     't2.n': '火車 + 公車', 't2.d': '搭乘台鐵至「蘇澳新站」，再步行約15分鐘；或於車站轉乘宜蘭公車【綠28】（蘇澳─南方澳環線），於「南方澳大橋」站下車步行約5分鐘即可抵達。票價：現金20元／悠遊卡15元，約每20–30分鐘一班。',
     't3.n': '長途客運', 't3.d': '從台北可搭國光客運（1879線）直達南方澳站；或搭葛瑪蘭客運、首都客運至「蘇澳轉運站」，再轉乘【綠28】公車約10分鐘即可抵達。',
     't4.n': '包車 / 接送', 't4.d': '如需包車或接送服務，歡迎透過 LINE 詢問合作車行聯繫方式，我們協助安排。',
+    'bus.title': '附近公車資訊',
+    'bus.nearest': '最近站牌', 'bus.walk': '步行約 5 分鐘',
+    'bus.fare': '票價', 'bus.freq': '班距', 'bus.op': '業者',
     'map.ph': 'Google Maps 嵌入地圖（上線後顯示）',
     'line.book.title': '更快速！直接加 LINE 預約',
     'line.book.desc': '加入我們的 LINE，即時詢問空閒日期、報價，或直接完成預約。',
@@ -162,6 +165,9 @@ const T: Record<Lang, Record<string, string>> = {
     't2.n': 'Train + Bus', 't2.d': 'Take TRA to "Suao New Station", then walk ~15 min or transfer to Green Route 28 bus (Suao–Nanfang\'ao loop) and alight at "Nanfang\'ao Bridge" stop (~5 min walk). Fare: NT$20 cash / NT$15 EasyCard. Buses run every 20–30 min.',
     't3.n': 'Long-Distance Bus', 't3.d': 'From Taipei, take Kuokuang Bus (Route 1879) directly to Nanfang\'ao. Or take Kamalan/Capital Bus to "Suao Transfer Station", then transfer to Green 28 bus (~10 min ride).',
     't4.n': 'Charter / Pickup', 't4.d': 'Need a ride? Message us on LINE and we\'ll help arrange a driver.',
+    'bus.title': 'Nearby Bus Routes',
+    'bus.nearest': 'Nearest Stop', 'bus.walk': '~5 min walk',
+    'bus.fare': 'Fare', 'bus.freq': 'Frequency', 'bus.op': 'Operator',
     'map.ph': 'Google Maps embed (live after launch)',
     'line.book.title': 'Faster! Book Directly via LINE',
     'line.book.desc': 'Add our LINE to check availability, get a quote, or book instantly.',
@@ -243,6 +249,9 @@ const T: Record<Lang, Record<string, string>> = {
     't2.n': '電車 + バス', 't2.d': '台鉄「蘇澳新駅」下車後、徒歩約15分。またはグリーン28バス（蘇澳─南方澳環線）に乗り「南方澳大橋」停留所で下車（徒歩約5分）。運賃：現金20元／ICカード15元、約20〜30分間隔で運行。',
     't3.n': '長距離バス', 't3.d': '台北からは国光客運（1879線）で南方澳まで直行可能。またはカマラン客運・首都客運で「蘇澳転運站」下車後、グリーン28バスに乗り換え（約10分）。',
     't4.n': 'チャーター / 送迎', 't4.d': '送迎をご希望の場合はLINEにてご連絡ください。手配をお手伝いします。',
+    'bus.title': '近くのバス路線',
+    'bus.nearest': '最寄りバス停', 'bus.walk': '徒歩約5分',
+    'bus.fare': '運賃', 'bus.freq': '運行間隔', 'bus.op': '運営会社',
     'map.ph': 'Google マップ埋め込み（公開後に表示）',
     'line.book.title': 'LINEで直接予約がもっと便利！',
     'line.book.desc': 'LINEを追加して、空き状況や料金をすぐに確認。そのまま予約も可能です。',
@@ -324,6 +333,9 @@ const T: Record<Lang, Record<string, string>> = {
     't2.n': '기차 + 버스', 't2.d': '대만철도 「쑤아오 신역」 하차 후 도보 약 15분. 또는 그린 28번 버스（쑤아오─난팡아오 순환선）로 「난팡아오 대교」 정류장 하차 후 도보 약 5분. 요금: 현금 20위안 / 교통카드 15위안, 약 20~30분 간격 운행.',
     't3.n': '장거리 버스', 't3.d': '타이베이에서 국광버스（1879번）로 난팡아오 직행 가능. 또는 까마란·수도버스로 「쑤아오 환승터미널」 하차 후 그린 28번 버스 환승（약 10분）.',
     't4.n': '전세 차량 / 픽업', 't4.d': '픽업 서비스가 필요하시면 LINE으로 문의해 주세요. 차량 수배를 도와드립니다.',
+    'bus.title': '근처 버스 노선',
+    'bus.nearest': '가장 가까운 정류장', 'bus.walk': '도보 약 5분',
+    'bus.fare': '요금', 'bus.freq': '배차 간격', 'bus.op': '운영사',
     'map.ph': 'Google 지도 삽입 (오픈 후 표시)',
     'line.book.title': '더 빠르게! LINE으로 바로 예약',
     'line.book.desc': 'LINE을 추가하면 빈 날짜 확인, 요금 문의, 예약까지 바로 가능합니다.',
@@ -772,6 +784,48 @@ export default function Home() {
             </div>
           ))}
         </div>
+        {/* ── 附近公車資訊 ── */}
+        <div className="mb-10">
+          <h3 className="font-bold text-lg mb-4 flex items-center gap-2" style={{ color: '#1E3A5F' }}>
+            🚌 {t('bus.title')}
+          </h3>
+          <div className="rounded-xl border border-blue-100 bg-white shadow-sm overflow-hidden">
+            {/* 路線標題列 */}
+            <div className="flex items-center gap-3 px-5 py-3" style={{ background: '#0EA5E9' }}>
+              <span className="text-white font-black text-sm tracking-widest">綠 28</span>
+              <span className="text-white text-sm font-semibold">蘇澳新站 ↔ 南方澳環線</span>
+              <span className="ml-auto text-xs text-blue-100">Green Route 28</span>
+            </div>
+            {/* 資訊格 */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-y sm:divide-y-0 divide-blue-50">
+              <div className="px-4 py-3">
+                <p className="text-xs font-bold mb-1" style={{ color: '#0EA5E9' }}>{t('bus.nearest')}</p>
+                <p className="text-sm font-semibold" style={{ color: '#1E3A5F' }}>南方澳大橋</p>
+                <p className="text-xs mt-0.5" style={{ color: '#4A7FA5' }}>{t('bus.walk')}</p>
+              </div>
+              <div className="px-4 py-3">
+                <p className="text-xs font-bold mb-1" style={{ color: '#0EA5E9' }}>{t('bus.fare')}</p>
+                <p className="text-sm font-semibold" style={{ color: '#1E3A5F' }}>NT$ 20 現金</p>
+                <p className="text-xs mt-0.5" style={{ color: '#4A7FA5' }}>NT$ 15 悠遊卡</p>
+              </div>
+              <div className="px-4 py-3">
+                <p className="text-xs font-bold mb-1" style={{ color: '#0EA5E9' }}>{t('bus.freq')}</p>
+                <p className="text-sm font-semibold" style={{ color: '#1E3A5F' }}>約 20–30 分鐘</p>
+                <p className="text-xs mt-0.5" style={{ color: '#4A7FA5' }}>一班</p>
+              </div>
+              <div className="px-4 py-3">
+                <p className="text-xs font-bold mb-1" style={{ color: '#0EA5E9' }}>{t('bus.op')}</p>
+                <p className="text-sm font-semibold" style={{ color: '#1E3A5F' }}>國光客運</p>
+                <p className="text-xs mt-0.5" style={{ color: '#4A7FA5' }}>Kuokuang Bus</p>
+              </div>
+            </div>
+            {/* 完整路線說明 */}
+            <div className="px-5 py-3 text-xs border-t border-blue-50" style={{ color: '#4A7FA5', background: '#f0f9ff' }}>
+              🗺 完整路線：蘇澳新站 → 蘇澳轉運站 → 蘇澳港 → <strong>豆腐岬</strong> → 內埤海邊 → 南寧市場 → 南方澳大橋 → 回蘇澳新站
+            </div>
+          </div>
+        </div>
+
         <div className="rounded-xl overflow-hidden shadow-md" style={{ height: '380px' }}>
           <iframe
             src="https://www.google.com/maps?q=宜蘭縣蘇澳鎮造船路102號&output=embed&hl=zh-TW"
