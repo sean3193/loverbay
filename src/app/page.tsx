@@ -737,28 +737,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── LINE 預約區塊 ── */}
-      <section className="py-16 px-[5%]" style={{ background: 'linear-gradient(135deg, #06C755 0%, #04a344 100%)' }}>
-        <div className="max-w-2xl mx-auto text-center text-white">
-          <div className="text-5xl mb-4">💬</div>
-          <h2 className="font-black text-2xl mb-3">{t('line.book.title')}</h2>
-          <p className="mb-2 opacity-90 text-base">{t('line.book.desc')}</p>
-          <p className="mb-8 opacity-75 text-sm">
-            {t('line.book.id')}<strong className="text-white">{LINE_ID}</strong>
-          </p>
-          <a
-            href={LINE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white font-black text-lg px-10 py-4 rounded-full shadow-xl no-underline hover:-translate-y-1 transition-transform"
-            style={{ color: '#06C755' }}
-          >
-            <span className="text-2xl">💬</span>
-            {t('line.book.btn')}
-          </a>
-        </div>
-      </section>
-
       {/* ── 8. 附近景點 ── */}
       <section id="spots" className="py-24 px-[5%]">
         <p className="text-xs font-bold tracking-[0.3em] uppercase mb-3" style={{ color: '#0EA5E9' }}>Nearby</p>
