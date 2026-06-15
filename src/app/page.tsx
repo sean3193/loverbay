@@ -392,10 +392,16 @@ export default function Home() {
           灣灣拾光
         </a>
         <ul className="hidden md:flex gap-6 list-none">
-          {(['about', 'spaces', 'pricing', 'booking', 'transport'] as const).map(s => (
-            <li key={s}>
-              <a href={`#${s}`} className={`nav-link no-underline text-sm transition-opacity hover:opacity-100 opacity-90 ${scrolled ? 'text-[#1A4A6E]' : 'text-white'}`}>
-                {t(`nav.${s}`)}
+          {([
+            { key: 'about', href: 'about' },
+            { key: 'spaces', href: 'gallery' },
+            { key: 'pricing', href: 'pricing' },
+            { key: 'booking', href: 'booking' },
+            { key: 'transport', href: 'transport' },
+          ]).map(({ key, href }) => (
+            <li key={key}>
+              <a href={`#${href}`} className={`nav-link no-underline text-sm transition-opacity hover:opacity-100 opacity-90 ${scrolled ? 'text-[#1A4A6E]' : 'text-white'}`}>
+                {t(`nav.${key}`)}
               </a>
             </li>
           ))}
