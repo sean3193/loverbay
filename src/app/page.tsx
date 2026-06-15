@@ -540,51 +540,33 @@ export default function Home() {
           {t('space.title')}
         </h2>
         <p className="mb-10 max-w-xl" style={{ color: '#4A7FA5' }}>{t('space.desc')}</p>
-        <div className="grid lg:grid-cols-2 gap-10 items-start">
-          {/* 左欄：空間卡片 */}
-          <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform">
-            <div className="relative h-56">
-              <Image src={`${BASE}/photos/balcony-4.jpg`} alt="全棟空間租賃" fill className="object-cover" />
-              <span className="absolute top-3 left-3 text-xs font-bold text-white px-3 py-1 rounded z-10" style={{ background: '#0EA5E9' }}>
-                {t('space.badge')}
-              </span>
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
+          {/* 左欄：照片 */}
+          <div className="relative rounded-2xl overflow-hidden shadow-lg" style={{ height: '460px' }}>
+            <Image src={`${BASE}/photos/balcony-4.jpg`} alt="全棟空間租賃" fill className="object-cover" />
+            <span className="absolute top-4 left-4 text-xs font-bold text-white px-3 py-1 rounded z-10" style={{ background: '#0EA5E9' }}>
+              {t('space.badge')}
+            </span>
+          </div>
+          {/* 右欄：文字內容 */}
+          <div>
+            <h3 className="font-black text-2xl mb-3" style={{ color: '#1E3A5F' }}>{t('space.name')}</h3>
+            <p className="text-sm leading-relaxed mb-6" style={{ color: '#4A7FA5' }}>{t('space.sdesc')}</p>
+            <div className="flex gap-6 mb-6 text-sm">
+              <span style={{ color: '#4A7FA5' }}>{t('space.pax')}<strong style={{ color: '#0EA5E9' }}>{t('space.pax.v')}</strong></span>
+              <span style={{ color: '#4A7FA5' }}>{t('space.period')}<strong style={{ color: '#0EA5E9' }}>{t('space.period.v')}</strong></span>
             </div>
-            <div className="p-6">
-              <h3 className="font-black text-xl mb-1" style={{ color: '#1E3A5F' }}>{t('space.name')}</h3>
-              <p className="text-sm mb-4" style={{ color: '#4A7FA5' }}>{t('space.sdesc')}</p>
-              <div className="flex gap-4 mb-4 text-sm">
-                <span style={{ color: '#4A7FA5' }}>{t('space.pax')}<strong style={{ color: '#0EA5E9' }}>{t('space.pax.v')}</strong></span>
-                <span style={{ color: '#4A7FA5' }}>{t('space.period')}<strong style={{ color: '#0EA5E9' }}>{t('space.period.v')}</strong></span>
-              </div>
-              <div className="flex flex-wrap gap-2 mb-5">
-                {['a1','a2','a3','a4','a5','a6'].map(a => (
-                  <span key={a} className="text-xs px-3 py-1 rounded-full" style={{ background: '#E0F2FE', color: '#1E3A5F' }}>{t(a)}</span>
-                ))}
-              </div>
+            <div className="flex flex-wrap gap-2 mb-8">
+              {['a1','a2','a3','a4','a5','a6'].map(a => (
+                <span key={a} className="text-xs px-3 py-1.5 rounded-full font-medium" style={{ background: '#E0F2FE', color: '#1E3A5F' }}>{t(a)}</span>
+              ))}
             </div>
-            <div className="px-6 pb-5 flex items-center justify-between border-t pt-4" style={{ borderColor: '#f0f0f0' }}>
+            <div className="flex items-center gap-4">
               <span className="text-sm" style={{ color: '#9CB3C9' }}>{t('space.hint')}</span>
-              <a href="#booking" className="font-bold text-sm text-white px-5 py-2 rounded no-underline" style={{ background: '#0EA5E9' }}>
+              <a href="#booking" className="font-bold text-sm text-white px-6 py-3 rounded-full no-underline hover:-translate-y-0.5 transition-transform" style={{ background: '#0EA5E9' }}>
                 {t('space.cta')}
               </a>
             </div>
-          </div>
-          {/* 右欄：包場亮點 */}
-          <div className="flex flex-col gap-5">
-            {[
-              { icon: '🔑', title: t('f1.t'), desc: t('f1.d') },
-              { icon: '🌊', title: t('f2.t'), desc: t('f2.d') },
-              { icon: '🏛️', title: t('f3.t'), desc: t('f3.d') },
-              { icon: '💬', title: t('f4.t'), desc: t('f4.d') },
-            ].map((item, i) => (
-              <div key={i} className="flex gap-4 items-start p-5 rounded-xl bg-white shadow-sm border border-gray-100">
-                <span className="text-2xl flex-shrink-0">{item.icon}</span>
-                <div>
-                  <h4 className="font-bold text-sm mb-1" style={{ color: '#1E3A5F' }}>{item.title}</h4>
-                  <p className="text-xs leading-relaxed" style={{ color: '#4A7FA5' }}>{item.desc}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
