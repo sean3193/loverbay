@@ -714,7 +714,7 @@ export default function Home() {
               >
                 {t('line.book.btn')}
               </a>
-              <p className="text-xs mt-3 opacity-80">{t('line.book.id')}<strong>{LINE_ID}</strong></p>
+              <p className="text-sm mt-3 opacity-80">{t('line.book.id')}<strong>{LINE_ID}</strong></p>
             </div>
 
             {/* 預約說明 */}
