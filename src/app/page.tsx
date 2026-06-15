@@ -641,82 +641,99 @@ export default function Home() {
         <p className="text-xs font-bold tracking-[0.3em] uppercase mb-3" style={{ color: '#0EA5E9' }}>Reservation</p>
         <h2 className="font-black mb-3" style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', color: '#1E3A5F' }}>{t('book.title')}</h2>
         <p className="mb-10" style={{ color: '#4A7FA5' }}>{t('book.desc')}</p>
-        <div className="bg-white rounded-2xl p-8 max-w-2xl shadow-md">
-          <div className="grid md:grid-cols-2 gap-5 mb-5">
-            <div>
-              <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.name')} <span className="text-red-500">*</span></label>
-              <input type="text" placeholder={t('f.name.ph')} className="form-input" />
+        <div className="grid lg:grid-cols-[1fr_380px] gap-8 items-start">
+          {/* 左欄：表單 */}
+          <div className="bg-white rounded-2xl p-8 shadow-md">
+            <div className="grid md:grid-cols-2 gap-5 mb-5">
+              <div>
+                <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.name')} <span className="text-red-500">*</span></label>
+                <input type="text" placeholder={t('f.name.ph')} className="form-input" />
+              </div>
+              <div>
+                <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.phone')} <span className="text-red-500">*</span></label>
+                <input type="tel" placeholder="0912-345-678" className="form-input" />
+              </div>
             </div>
-            <div>
-              <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.phone')} <span className="text-red-500">*</span></label>
-              <input type="tel" placeholder="0912-345-678" className="form-input" />
+            <div className="mb-5">
+              <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.email')} <span className="text-red-500">*</span></label>
+              <input type="email" placeholder="your@email.com" className="form-input" />
             </div>
-          </div>
-          <div className="mb-5">
-            <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.email')} <span className="text-red-500">*</span></label>
-            <input type="email" placeholder="your@email.com" className="form-input" />
-          </div>
-          <div className="mb-5">
-            <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.plan')}</label>
-            <input type="text" value={t('f.plan.v')} readOnly className="form-input font-bold cursor-default" style={{ background: '#f0f7ff', color: '#0EA5E9' }} />
-          </div>
-          <div className="grid md:grid-cols-2 gap-5 mb-5">
-            <div>
-              <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.in')} <span className="text-red-500">*</span></label>
-              <input type="date" className="form-input" />
+            <div className="mb-5">
+              <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.plan')}</label>
+              <input type="text" value={t('f.plan.v')} readOnly className="form-input font-bold cursor-default" style={{ background: '#f0f7ff', color: '#0EA5E9' }} />
             </div>
-            <div>
-              <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.out')} <span className="text-red-500">*</span></label>
-              <input type="date" className="form-input" />
+            <div className="grid md:grid-cols-2 gap-5 mb-5">
+              <div>
+                <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.in')} <span className="text-red-500">*</span></label>
+                <input type="date" className="form-input" />
+              </div>
+              <div>
+                <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.out')} <span className="text-red-500">*</span></label>
+                <input type="date" className="form-input" />
+              </div>
             </div>
-          </div>
-          <div className="grid md:grid-cols-2 gap-5 mb-5">
-            <div>
-              <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.guests')} <span className="text-red-500">*</span></label>
-              <input type="number" min="1" placeholder={t('f.guests.ph')} className="form-input" />
+            <div className="grid md:grid-cols-2 gap-5 mb-5">
+              <div>
+                <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.guests')} <span className="text-red-500">*</span></label>
+                <input type="number" min="1" placeholder={t('f.guests.ph')} className="form-input" />
+              </div>
+              <div>
+                <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.source')}</label>
+                <select className="form-input">
+                  <option value="">{t('f.source.ph')}</option>
+                  <option>Instagram</option>
+                  <option>Facebook</option>
+                  <option>{t('f.friend')}</option>
+                  <option>Google</option>
+                </select>
+              </div>
             </div>
-            <div>
-              <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.source')}</label>
-              <select className="form-input">
-                <option value="">{t('f.source.ph')}</option>
-                <option>Instagram</option>
-                <option>Facebook</option>
-                <option>{t('f.friend')}</option>
-                <option>Google</option>
-              </select>
+            <div className="mb-6">
+              <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.notes')}</label>
+              <textarea placeholder={t('f.notes.ph')} rows={3} className="form-input resize-y" />
             </div>
-          </div>
-          <div className="mb-6">
-            <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.notes')}</label>
-            <textarea placeholder={t('f.notes.ph')} rows={3} className="form-input resize-y" />
-          </div>
-          <button className="w-full text-white font-bold py-4 rounded-lg text-base transition-opacity hover:opacity-90" style={{ background: '#0EA5E9' }}>
-            {t('f.submit')}
-          </button>
-
-          {/* 分隔線 */}
-          <div className="flex items-center gap-3 my-5">
-            <div className="flex-1 h-px" style={{ background: '#dde8f0' }} />
-            <span className="text-sm" style={{ color: '#9CB3C9' }}>{t('line.or')}</span>
-            <div className="flex-1 h-px" style={{ background: '#dde8f0' }} />
+            <button className="w-full text-white font-bold py-4 rounded-lg text-base transition-opacity hover:opacity-90" style={{ background: '#0EA5E9' }}>
+              {t('f.submit')}
+            </button>
+            <p className="text-center text-xs mt-4 leading-relaxed" style={{ color: '#888' }}>{t('f.note')}</p>
           </div>
 
-          {/* 直接加 LINE 預約大按鈕 */}
-          <a
-            href={LINE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full flex items-center justify-center gap-3 text-white font-black text-lg py-4 rounded-lg no-underline hover:opacity-90 transition-opacity"
-            style={{ background: '#06C755' }}
-          >
-            <span className="text-2xl">💬</span>
-            {t('line.book.btn')}
-          </a>
-          <p className="text-center text-xs mt-3" style={{ color: '#9CB3C9' }}>
-            {t('line.book.id')}<strong style={{ color: '#06C755' }}>{LINE_ID}</strong>
-          </p>
+          {/* 右欄：LINE 快速預約 + 注意事項 */}
+          <div className="flex flex-col gap-5">
+            {/* LINE 卡片 */}
+            <div className="rounded-2xl p-6 text-white text-center shadow-md" style={{ background: 'linear-gradient(135deg, #06C755, #04a344)' }}>
+              <div className="text-4xl mb-3">💬</div>
+              <h3 className="font-black text-lg mb-2">{t('line.book.title')}</h3>
+              <p className="text-sm mb-4 opacity-90">{t('line.book.desc')}</p>
+              <a
+                href={LINE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full bg-white font-black text-base py-3 rounded-lg no-underline hover:opacity-90 transition-opacity"
+                style={{ color: '#06C755' }}
+              >
+                {t('line.book.btn')}
+              </a>
+              <p className="text-xs mt-3 opacity-80">{t('line.book.id')}<strong>{LINE_ID}</strong></p>
+            </div>
 
-          <p className="text-center text-xs mt-4 leading-relaxed" style={{ color: '#888' }}>{t('f.note')}</p>
+            {/* 預約說明 */}
+            <div className="rounded-2xl p-6 bg-white shadow-md">
+              <h4 className="font-bold text-sm mb-4" style={{ color: '#1E3A5F' }}>📋 預約注意事項</h4>
+              {[
+                { icon: '⏰', text: '送出表單後 24 小時內確認回覆' },
+                { icon: '💳', text: '確認後將提供付款方式，完成訂金即完成預約' },
+                { icon: '👥', text: '入場人數上限 10 人' },
+                { icon: '🐾', text: '如有寵物或特殊需求，請於備註說明' },
+                { icon: '📵', text: '若需即時回覆，建議直接加 LINE 詢問' },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-2 items-start mb-3 last:mb-0">
+                  <span className="flex-shrink-0">{item.icon}</span>
+                  <p className="text-xs leading-relaxed" style={{ color: '#4A7FA5' }}>{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
