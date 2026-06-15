@@ -730,16 +730,19 @@ export default function Home() {
         <p className="mb-10" style={{ color: '#4A7FA5' }}>{t('spots.desc')}</p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
-            { icon: '🐟', n: 's1.n', d: 's1.d', dist: 's1.dist' },
-            { icon: '💧', n: 's2.n', d: 's2.d', dist: 's2.dist' },
-            { icon: '🤿', n: 's3.n', d: 's3.d', dist: 's3.dist' },
-            { icon: '🏄', n: 's4.n', d: 's4.d', dist: 's4.dist' },
-            { icon: '♨️', n: 's5.n', d: 's5.d', dist: 's5.dist' },
-            { icon: '🌙', n: 's6.n', d: 's6.d', dist: 's6.dist' },
+            { n: 's1.n', d: 's1.d', dist: 's1.dist', photo: 'https://upload.wikimedia.org/wikipedia/commons/5/54/Su%27Ao%27s_Nanfangao_Port_from_above.jpg', credit: 'Bob Tan / Wikimedia Commons (CC BY 4.0)' },
+            { n: 's2.n', d: 's2.d', dist: 's2.dist', photo: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Taiwan_SuAo_Cold_Spring.JPG', credit: 'Vegafish / Wikimedia Commons (CC BY-SA 2.5)' },
+            { n: 's3.n', d: 's3.d', dist: 's3.dist', photo: 'https://upload.wikimedia.org/wikipedia/commons/0/07/Su%27Ao%27s_Tofu_Cape_from_above.jpg', credit: 'Bob Tan / Wikimedia Commons (CC BY 4.0)' },
+            { n: 's4.n', d: 's4.d', dist: 's4.dist', photo: 'https://upload.wikimedia.org/wikipedia/commons/8/85/Waiao_Beach_%E5%A4%96%E6%BE%B3%E6%B5%B7%E7%81%98_-_panoramio.jpg', credit: 'lienyuan lee / Wikimedia Commons (CC BY 3.0)' },
+            { n: 's5.n', d: 's5.d', dist: 's5.dist', photo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Jiaosi_Hot_Spring_Hotels.jpg', credit: 'KasugaHuang / Wikimedia Commons (CC BY-SA 3.0)' },
+            { n: 's6.n', d: 's6.d', dist: 's6.dist', photo: 'https://upload.wikimedia.org/wikipedia/commons/6/6c/2014-01-29_Luodong_Night_Market_01.jpg', credit: 'tomscoffin / Wikimedia Commons (CC BY 2.0)' },
           ].map((s, i) => (
             <div key={i} className="border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-28 flex items-center justify-center text-4xl" style={{ background: 'linear-gradient(135deg, #b8e4f9, #5bb8e8)' }}>
-                {s.icon}
+              <div className="relative h-40 overflow-hidden">
+                <img src={s.photo} alt={t(s.n)} className="w-full h-full object-cover" loading="lazy" />
+                <span className="absolute bottom-1 right-1 text-white px-1.5 py-0.5 rounded" style={{ fontSize: '0.6rem', background: 'rgba(0,0,0,0.5)' }}>
+                  © {s.credit}
+                </span>
               </div>
               <div className="p-4">
                 <h4 className="font-bold text-sm mb-1" style={{ color: '#1E3A5F' }}>{t(s.n)}</h4>
