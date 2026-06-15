@@ -540,7 +540,8 @@ export default function Home() {
           {t('space.title')}
         </h2>
         <p className="mb-10 max-w-xl" style={{ color: '#4A7FA5' }}>{t('space.desc')}</p>
-        <div className="max-w-lg">
+        <div className="grid lg:grid-cols-2 gap-10 items-start">
+          {/* 左欄：空間卡片 */}
           <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform">
             <div className="relative h-56">
               <Image src={`${BASE}/photos/balcony-4.jpg`} alt="全棟空間租賃" fill className="object-cover" />
@@ -567,6 +568,23 @@ export default function Home() {
                 {t('space.cta')}
               </a>
             </div>
+          </div>
+          {/* 右欄：包場亮點 */}
+          <div className="flex flex-col gap-5">
+            {[
+              { icon: '🔑', title: t('f1.t'), desc: t('f1.d') },
+              { icon: '🌊', title: t('f2.t'), desc: t('f2.d') },
+              { icon: '🏛️', title: t('f3.t'), desc: t('f3.d') },
+              { icon: '💬', title: t('f4.t'), desc: t('f4.d') },
+            ].map((item, i) => (
+              <div key={i} className="flex gap-4 items-start p-5 rounded-xl bg-white shadow-sm border border-gray-100">
+                <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                <div>
+                  <h4 className="font-bold text-sm mb-1" style={{ color: '#1E3A5F' }}>{item.title}</h4>
+                  <p className="text-xs leading-relaxed" style={{ color: '#4A7FA5' }}>{item.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
