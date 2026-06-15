@@ -352,10 +352,10 @@ const GALLERY = [
   { src: `${BASE}/photos/room-single.webp`,   alt: '單人房',     label: 'gallery.label10', cls: '' },
 ]
 const GALLERY_LABELS: Record<Lang, Record<string, string>> = {
-  zh: { 'gallery.label1': '海岸全景', 'gallery.label2': '夜景陽台', 'gallery.label3': '戶外陽台', 'gallery.label4': '海景客廳', 'gallery.label5': '海景臥室', 'gallery.label6': '全套廚房', 'gallery.label7': '四人房', 'gallery.label8': '雙人房', 'gallery.label9': '衛浴空間', 'gallery.label10': '單人房' },
-  en: { 'gallery.label1': 'Coastal View', 'gallery.label2': 'Night Terrace', 'gallery.label3': 'Outdoor Deck', 'gallery.label4': 'Ocean Living Room', 'gallery.label5': 'Ocean Bedroom', 'gallery.label6': 'Full Kitchen', 'gallery.label7': 'Twin Room', 'gallery.label8': 'Double Room', 'gallery.label9': 'Bathroom', 'gallery.label10': 'Single Room' },
-  ja: { 'gallery.label1': '海岸パノラマ', 'gallery.label2': 'ナイトテラス', 'gallery.label3': 'アウトドアデッキ', 'gallery.label4': 'オーシャンリビング', 'gallery.label5': 'オーシャンベッドルーム', 'gallery.label6': 'フルキッチン', 'gallery.label7': '4人部屋', 'gallery.label8': 'ダブルルーム', 'gallery.label9': 'バスルーム', 'gallery.label10': 'シングルルーム' },
-  ko: { 'gallery.label1': '해안 전경', 'gallery.label2': '야경 테라스', 'gallery.label3': '야외 데크', 'gallery.label4': '오션뷰 거실', 'gallery.label5': '오션뷰 침실', 'gallery.label6': '풀 주방', 'gallery.label7': '4인실', 'gallery.label8': '더블룸', 'gallery.label9': '욕실', 'gallery.label10': '싱글룸' },
+  zh: { 'gallery.label1': '海岸全景', 'gallery.label2': '海風慢活露台', 'gallery.label3': '海風慢活露台', 'gallery.label4': '交流交誼廳', 'gallery.label5': '二樓·獨立休憩海景場域', 'gallery.label6': '一樓·多功能共享中島空間', 'gallery.label7': '三樓·全景聽海舒壓空間', 'gallery.label8': '二樓·獨立休憩海景場域', 'gallery.label9': '獨立衛浴場域', 'gallery.label10': '三樓·全景聽海舒壓空間' },
+  en: { 'gallery.label1': 'Coastal Panorama', 'gallery.label2': 'Ocean Breeze Terrace', 'gallery.label3': 'Ocean Breeze Terrace', 'gallery.label4': 'Social Lounge', 'gallery.label5': '2F · Ocean View Retreat', 'gallery.label6': '1F · Shared Island Kitchen', 'gallery.label7': '3F · Panoramic Seaview Space', 'gallery.label8': '2F · Ocean View Retreat', 'gallery.label9': 'Private Bath Suite', 'gallery.label10': '3F · Panoramic Seaview Space' },
+  ja: { 'gallery.label1': '海岸パノラマ', 'gallery.label2': '潮風テラス', 'gallery.label3': '潮風テラス', 'gallery.label4': 'ラウンジスペース', 'gallery.label5': '2F・オーシャンビュー休憩エリア', 'gallery.label6': '1F・共有アイランドキッチン', 'gallery.label7': '3F・全景シービュースペース', 'gallery.label8': '2F・オーシャンビュー休憩エリア', 'gallery.label9': 'プライベートバス', 'gallery.label10': '3F・全景シービュースペース' },
+  ko: { 'gallery.label1': '해안 파노라마', 'gallery.label2': '해풍 테라스', 'gallery.label3': '해풍 테라스', 'gallery.label4': '교류 라운지', 'gallery.label5': '2F·오션뷰 휴식 공간', 'gallery.label6': '1F·공유 아일랜드 키친', 'gallery.label7': '3F·파노라마 오션뷰 공간', 'gallery.label8': '2F·오션뷰 휴식 공간', 'gallery.label9': '전용 욕실 공간', 'gallery.label10': '3F·파노라마 오션뷰 공간' },
 }
 
 /* ══════════════════════════════════════════
