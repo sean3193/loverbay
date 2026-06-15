@@ -346,7 +346,7 @@ const GALLERY = [
   { src: `${BASE}/photos/seaview-living.jpg`, alt: '海景客廳',   label: 'gallery.label4',  cls: '' },
   { src: `${BASE}/photos/seaview-bed.webp`,   alt: '海景臥室',   label: 'gallery.label5',  cls: '' },
   { src: `${BASE}/photos/kitchen.jpg`,        alt: '全套廚房',   label: 'gallery.label6',  cls: '' },
-  { src: `${BASE}/photos/room-twin.jpg`,      alt: '四人房',     label: 'gallery.label7',  cls: 'gallery-wide', pos: 'object-top' },
+  { src: `${BASE}/photos/room-twin.jpg`,      alt: '四人房',     label: 'gallery.label7',  cls: 'gallery-wide', pos: 'object-contain', bg: '#2a2a2a' },
   { src: `${BASE}/photos/room-double.jpg`,    alt: '雙人房',     label: 'gallery.label8',  cls: '' },
   { src: `${BASE}/photos/bathroom.jpg`,       alt: '衛浴空間',   label: 'gallery.label9',  cls: '' },
   { src: `${BASE}/photos/room-single.webp`,   alt: '單人房',     label: 'gallery.label10', cls: '' },
@@ -502,8 +502,8 @@ export default function Home() {
         </h2>
         <div className="gallery-grid">
           {GALLERY.map((photo, i) => (
-            <div key={i} className={`gallery-item ${photo.cls}`}>
-              <Image src={photo.src} alt={photo.alt} fill sizes="(max-width:768px) 50vw, 25vw" className={`gallery-img object-cover ${photo.pos ?? ''}`} />
+            <div key={i} className={`gallery-item ${photo.cls}`} style={photo.bg ? { background: photo.bg } : {}}>
+              <Image src={photo.src} alt={photo.alt} fill sizes="(max-width:768px) 50vw, 25vw" className={`gallery-img ${photo.pos ? photo.pos : 'object-cover'}`} />
               <span className="gallery-label">{gl(photo.label)}</span>
             </div>
           ))}
