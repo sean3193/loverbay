@@ -501,8 +501,8 @@ export default function Home() {
         </h2>
         <div className="gallery-grid">
           {GALLERY.map((photo, i) => (
-            <div key={i} className={`gallery-item ${photo.cls}`} style={photo.bg ? { background: photo.bg } : {}}>
-              <Image src={photo.src} alt={photo.alt} fill sizes="(max-width:768px) 50vw, 25vw" className={`gallery-img ${photo.pos ? photo.pos : 'object-cover'}`} />
+            <div key={i} className={`gallery-item ${photo.cls}`}>
+              <Image src={photo.src} alt={photo.alt} fill sizes="(max-width:768px) 50vw, 25vw" className="gallery-img object-cover" />
               <span className="gallery-label">{gl(photo.label)}</span>
             </div>
           ))}
