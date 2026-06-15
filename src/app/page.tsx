@@ -761,9 +761,9 @@ export default function Home() {
                 </span>
               </div>
               <div className="p-4">
-                <h4 className="font-bold text-sm mb-1" style={{ color: '#1E3A5F' }}>{t(s.n)}</h4>
-                <p className="text-xs leading-relaxed mb-2" style={{ color: '#666' }}>{t(s.d)}</p>
-                <p className="text-xs font-bold" style={{ color: '#0EA5E9' }}>📍 {t(s.dist)}</p>
+                <h4 className="font-bold text-base mb-1" style={{ color: '#1E3A5F' }}>{t(s.n)}</h4>
+                <p className="text-sm leading-relaxed mb-2" style={{ color: '#666' }}>{t(s.d)}</p>
+                <p className="text-sm font-bold" style={{ color: '#0EA5E9' }}>📍 {t(s.dist)}</p>
               </div>
             </div>
           ))}
