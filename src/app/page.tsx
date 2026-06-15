@@ -434,7 +434,7 @@ export default function Home() {
             <button
               key={code}
               onClick={() => setLang(code)}
-              className={`lang-btn border rounded px-2.5 py-1 text-xs cursor-pointer transition-all ${
+              className={`lang-btn border rounded px-2.5 py-1 text-sm cursor-pointer transition-all ${
                 lang === code
                   ? 'bg-[#F59E0B] border-[#F59E0B] text-white'
                   : scrolled
@@ -487,7 +487,7 @@ export default function Home() {
 
       {/* ── 2. 品牌介紹 ── */}
       <section id="about" className="py-24 px-[5%]">
-        <p className="text-xs font-bold tracking-[0.3em] uppercase mb-3" style={{ color: '#0EA5E9' }}>About Us</p>
+        <p className="text-sm font-bold tracking-[0.3em] uppercase mb-3" style={{ color: '#0EA5E9' }}>About Us</p>
         <div className="grid md:grid-cols-2 gap-16 items-center mt-10">
           <div>
             <h2 className="font-black leading-snug mb-5" style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', color: '#1E3A5F' }}>
@@ -505,8 +505,8 @@ export default function Home() {
               ].map((f, i) => (
                 <div key={i} className="feature-card bg-white rounded-lg p-5 shadow-sm">
                   <div className="text-2xl mb-2">{f.icon}</div>
-                  <h4 className="font-bold text-sm mb-1" style={{ color: '#1E3A5F' }}>{t(f.t)}</h4>
-                  <p className="text-xs leading-relaxed" style={{ color: '#4A7FA5' }}>{t(f.d)}</p>
+                  <h4 className="font-bold text-base mb-1" style={{ color: '#1E3A5F' }}>{t(f.t)}</h4>
+                  <p className="text-sm leading-relaxed" style={{ color: '#4A7FA5' }}>{t(f.d)}</p>
                 </div>
               ))}
             </div>
@@ -558,7 +558,7 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap gap-2 mb-8">
               {['a1','a2','a3','a4','a5','a6'].map(a => (
-                <span key={a} className="text-xs px-3 py-1.5 rounded-full font-medium" style={{ background: '#E0F2FE', color: '#1E3A5F' }}>{t(a)}</span>
+                <span key={a} className="text-sm px-3 py-1.5 rounded-full font-medium" style={{ background: '#E0F2FE', color: '#1E3A5F' }}>{t(a)}</span>
               ))}
             </div>
             <div className="flex items-center gap-4">
@@ -587,18 +587,18 @@ export default function Home() {
                   {t('p.badge')}
                 </span>
               )}
-              <p className="text-xs font-bold tracking-widest mb-2" style={{ color: card.featured ? '#FFF3B0' : '#0EA5E9' }}>{card.type}</p>
+              <p className="text-sm font-bold tracking-widest mb-2" style={{ color: card.featured ? '#FFF3B0' : '#0EA5E9' }}>{card.type}</p>
               <h3 className="text-xl font-black mb-1">{t(card.k)}</h3>
-              <p className="text-sm mb-6 opacity-70">{t(card.sub)}</p>
+              <p className="text-base mb-6 opacity-70">{t(card.sub)}</p>
               <div className="text-4xl font-black mb-1" style={{ color: card.featured ? '#FFF3B0' : '#0EA5E9' }}>
                 <sup className="text-lg">NT$</sup>●●●●<sub className="text-base opacity-60">{t('p.day')}</sub>
               </div>
-              <p className="text-xs mt-5 leading-relaxed opacity-70">{t(card.note)}</p>
+              <p className="text-sm mt-5 leading-relaxed opacity-70">{t(card.note)}</p>
             </div>
           ))}
         </div>
         <div className="rounded-xl overflow-hidden border border-gray-200">
-          <table className="sr-table w-full border-collapse text-sm">
+          <table className="sr-table w-full border-collapse text-base">
             <thead>
               <tr>
                 <th className="text-left p-3">{t('sr.type')}</th>
