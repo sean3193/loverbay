@@ -461,7 +461,7 @@ export default function Home() {
         {/* 深色遮罩讓文字清晰可讀 */}
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,40,80,.45) 0%, rgba(0,60,120,.35) 50%, rgba(0,30,60,.6) 100%)' }} />
         <div className="relative z-10 text-white px-5">
-          <p className="text-base tracking-[0.25em] uppercase mb-4" style={{ color: '#FFF3B0', textShadow: '0 1px 4px rgba(0,0,0,.2)' }}>
+          <p className="text-sm md:text-base tracking-[0.08em] md:tracking-[0.25em] uppercase mb-4" style={{ color: '#FFF3B0', textShadow: '0 1px 4px rgba(0,0,0,.2)' }}>
             {t('hero.eyebrow')}
           </p>
           <h1 className="font-black leading-tight mb-3" style={{ fontSize: 'clamp(2.4rem,6vw,4.8rem)', textShadow: '0 2px 12px rgba(0,80,150,.3)' }}>
