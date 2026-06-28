@@ -613,7 +613,7 @@ export default function Home() {
               {
                 floor: '2F', floorLabel: '二樓',
                 name: '靜謐單人空間', sub: '溫馨獨立小角落',
-                desc: '安靜的小角落，適合一個人放空，也適合三五旅伴窩著談心。',
+                desc: '安靜的小角落，適合個人放空，也適合三五旅伴窩著談心。',
                 tags: ['一小床'],
                 extra: '+沙發床・多個旅伴剛剛好',
                 photo: '單人房全景.webp',
@@ -621,7 +621,7 @@ export default function Home() {
               {
                 floor: '1F', floorLabel: '一樓',
                 name: '舒活專屬空間', sub: '環境安靜舒適',
-                desc: '採光與氣圍都很舒服，適合喜歡安靜睡眠品質的旅人。',
+                desc: '採光與氛圍都很舒服，適合喜歡安靜睡眠品質的旅人。',
                 tags: ['一大床','獨立衛浴'],
                 extra: '',
                 photo: '雙人房.jpg',
