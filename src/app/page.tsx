@@ -619,7 +619,7 @@ export default function Home() {
                     )}
                   </div>
                 </div>
-                <div className="relative flex-shrink-0 rounded-lg overflow-hidden" style={{ width: '200px', height: '200px' }}>
+                <div className="relative flex-shrink-0 rounded-lg overflow-hidden w-24 h-24 md:w-48 md:h-48">
                   <Image src={`${BASE}/photos/${room.photo}`} alt={room.name} fill className="object-cover" />
                 </div>
               </div>
