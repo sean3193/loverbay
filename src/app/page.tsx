@@ -42,7 +42,7 @@ const T: Record<Lang, Record<string, string>> = {
     'pricing.desc': '所有價格皆含全棟空間使用費，詳細金額請填寫預約表單或聯繫 LINE 確認。',
     'p.weekday': '平日', 'p.weekday.sub': '週日至週四', 'p.weekday.note': '最優惠費率，建議彈性安排行程選平日',
     'p.badge': '最多人選擇',
-    'p.weekend': '假日', 'p.weekend.sub': '週五、週六', 'p.weekend.note': '假日需求高，建議提前 2 週以上預訂',
+    'p.weekend': '假日', 'p.weekend.sub': '週五、週六', 'p.weekend.note': '假日需求較多，建議提前 2 週以上預約洽詢',
     'p.holiday': '連續假期', 'p.holiday.sub': '各大連假期間', 'p.holiday.note': '各連假費率略有不同，詳見下方說明',
     'p.day': '/日',
     'sr.type': '連假類型', 'sr.period': '期間', 'sr.note': '特別說明',
@@ -658,10 +658,6 @@ export default function Home() {
               <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.email')} <span className="text-red-500">*</span></label>
               <input type="email" placeholder="your@email.com" className="form-input" />
             </div>
-            <div className="mb-5">
-              <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.plan')}</label>
-              <input type="text" value={t('f.plan.v')} readOnly className="form-input font-bold cursor-default" style={{ background: '#f0f7ff', color: '#0EA5E9' }} />
-            </div>
             <div className="grid md:grid-cols-2 gap-5 mb-5">
               <div>
                 <label className="block text-sm font-bold mb-1.5" style={{ color: '#333' }}>{t('f.in')} <span className="text-red-500">*</span></label>
@@ -723,9 +719,9 @@ export default function Home() {
               {[
                 { icon: '⏰', text: '送出表單後 24 小時內確認回覆' },
                 { icon: '💳', text: '確認後將提供付款方式，完成訂金即完成預約' },
-                { icon: '👥', text: '入場人數上限 10 人' },
+                { icon: '👥', text: '本空間配置最適合 9～12 人' },
                 { icon: '🐾', text: '如有寵物或特殊需求，請於備註說明' },
-                { icon: '📵', text: '若需即時回覆，建議直接加 LINE 詢問' },
+                { icon: '📵', text: '如需變更或取消行程，建議直接加 LINE 洽詢專人' },
               ].map((item, i) => (
                 <div key={i} className="flex gap-2 items-start mb-3 last:mb-0">
                   <span className="flex-shrink-0">{item.icon}</span>
