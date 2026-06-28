@@ -599,27 +599,31 @@ export default function Home() {
                 photo: '四人房床.jpg',
               },
             ].map((room, i) => (
-              <div key={i} className={`flex gap-4 bg-white border-x border-b border-gray-100 p-5 shadow-sm items-center ${i === 0 ? 'rounded-t-xl border-t' : ''} ${i === 3 ? 'rounded-b-xl' : ''}`}>
-                <div className="flex-shrink-0 w-14 text-center">
-                  <div className="text-xl font-black" style={{ color: '#C87941' }}>{room.floor}</div>
-                  <div className="text-sm mt-0.5" style={{ color: '#9CB3C9' }}>{room.floorLabel}</div>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex flex-wrap items-center gap-2 mb-2">
-                    <h4 className="font-black text-lg" style={{ color: '#1E3A5F' }}>{room.name}</h4>
-                    <span className="text-sm" style={{ color: '#9CB3C9' }}>{room.sub}</span>
+              <div key={i} className={`flex bg-white border-x border-b border-gray-100 overflow-hidden ${i === 0 ? 'rounded-t-xl border-t' : ''} ${i === 3 ? 'rounded-b-xl' : ''}`}>
+                {/* 左側：樓層 + 文字 */}
+                <div className="flex gap-3 p-5 flex-1 items-center min-w-0">
+                  <div className="flex-shrink-0 w-10 text-center">
+                    <div className="text-lg font-black" style={{ color: '#C87941' }}>{room.floor}</div>
+                    <div className="text-xs mt-0.5" style={{ color: '#9CB3C9' }}>{room.floorLabel}</div>
                   </div>
-                  <p className="text-base mb-3 leading-relaxed" style={{ color: '#4A7FA5' }}>{room.desc}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {room.tags.map(tag => (
-                      <span key={tag} className="text-sm px-3 py-1 rounded font-medium" style={{ background: '#E0F2FE', color: '#1E3A5F' }}>{tag}</span>
-                    ))}
-                    {room.extra && (
-                      <span className="text-sm px-3 py-1 rounded font-bold" style={{ background: '#FEF3C7', color: '#B45309' }}>{room.extra}</span>
-                    )}
+                  <div className="min-w-0">
+                    <div className="flex flex-wrap items-center gap-1.5 mb-1.5">
+                      <h4 className="font-black text-base" style={{ color: '#1E3A5F' }}>{room.name}</h4>
+                      <span className="text-xs" style={{ color: '#9CB3C9' }}>{room.sub}</span>
+                    </div>
+                    <p className="text-sm mb-2 leading-relaxed" style={{ color: '#4A7FA5' }}>{room.desc}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {room.tags.map(tag => (
+                        <span key={tag} className="text-xs px-2 py-1 rounded font-medium" style={{ background: '#E0F2FE', color: '#1E3A5F' }}>{tag}</span>
+                      ))}
+                      {room.extra && (
+                        <span className="text-xs px-2 py-1 rounded font-bold" style={{ background: '#FEF3C7', color: '#B45309' }}>{room.extra}</span>
+                      )}
+                    </div>
                   </div>
                 </div>
-                <div className="relative flex-shrink-0 rounded-lg overflow-hidden w-24 h-24 md:w-48 md:h-48">
+                {/* 右側：照片貼齊邊緣 */}
+                <div className="relative flex-shrink-0 w-32 md:w-52">
                   <Image src={`${BASE}/photos/${room.photo}`} alt={room.name} fill className="object-cover" />
                 </div>
               </div>
