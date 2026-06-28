@@ -518,10 +518,11 @@ export default function Home() {
 
       {/* ── 3. 照片牆 ── */}
       <section id="gallery" className="py-24 px-[5%]" style={{ background: '#E0F2FE' }}>
-        <p className="text-xs font-bold tracking-[0.3em] uppercase mb-3" style={{ color: '#0EA5E9' }}>Gallery</p>
-        <h2 className="font-black mb-8" style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', color: '#1E3A5F' }}>
+        <p className="text-xs font-bold tracking-[0.3em] uppercase mb-3" style={{ color: '#0EA5E9' }}>Our Space</p>
+        <h2 className="font-black mb-2" style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', color: '#1E3A5F' }}>
           {t('gallery.title')}
         </h2>
+        <p className="mb-8 max-w-xl" style={{ color: '#4A7FA5' }}>{t('space.sdesc')}</p>
         <div className="gallery-grid">
           {GALLERY.map((photo, i) => (
             <div key={i} className={`gallery-item ${photo.cls}`}>
@@ -532,45 +533,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 4. 空間介紹 ── */}
-      <section id="spaces" className="py-24 px-[5%]" style={{ background: '#FFF8EE' }}>
-        <p className="text-xs font-bold tracking-[0.3em] uppercase mb-3" style={{ color: '#0EA5E9' }}>Our Space</p>
-        <h2 className="font-black mb-3" style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', color: '#1E3A5F' }}>
-          {t('space.title')}
-        </h2>
-        <p className="mb-10 max-w-xl" style={{ color: '#4A7FA5' }}>{t('space.desc')}</p>
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
-          {/* 左欄：照片 */}
-          <div className="relative rounded-2xl overflow-hidden shadow-lg" style={{ height: '460px' }}>
-            <Image src={`${BASE}/photos/balcony-4.jpg`} alt="全棟空間租賃" fill className="object-cover" />
-            <span className="absolute top-4 left-4 text-xs font-bold text-white px-3 py-1 rounded z-10" style={{ background: '#0EA5E9' }}>
-              {t('space.badge')}
-            </span>
-          </div>
-          {/* 右欄：文字內容 */}
-          <div>
-            <h3 className="font-black text-2xl mb-3" style={{ color: '#1E3A5F' }}>{t('space.name')}</h3>
-            <p className="text-sm leading-relaxed mb-6" style={{ color: '#4A7FA5' }}>{t('space.sdesc')}</p>
-            <div className="flex gap-6 mb-6 text-sm">
-              <span style={{ color: '#4A7FA5' }}>{t('space.pax')}<strong style={{ color: '#0EA5E9' }}>{t('space.pax.v')}</strong></span>
-              <span style={{ color: '#4A7FA5' }}>{t('space.period')}<strong style={{ color: '#0EA5E9' }}>{t('space.period.v')}</strong></span>
-            </div>
-            <div className="flex flex-wrap gap-2 mb-8">
-              {['a1','a2','a3','a4','a5','a6'].map(a => (
-                <span key={a} className="text-sm px-3 py-1.5 rounded-full font-medium" style={{ background: '#E0F2FE', color: '#1E3A5F' }}>{t(a)}</span>
-              ))}
-            </div>
-            <div className="flex items-center gap-4">
-              <a href="#booking" className="font-bold text-sm text-white px-6 py-3 rounded-full no-underline hover:-translate-y-0.5 transition-transform" style={{ background: '#0EA5E9' }}>
-                {t('space.cta')}
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 4b. 空間詳細介紹 ── */}
-      <section id="spaces-detail" className="py-24 px-[5%]" style={{ background: '#FAFAF8' }}>
+      {/* ── 4. 空間配置 ── */}
+      <section id="spaces" className="py-24 px-[5%]" style={{ background: '#FAFAF8' }}>
         {/* 01 聚會空間 */}
         <div className="mb-16">
           <div className="flex flex-wrap items-baseline gap-3 mb-3">
