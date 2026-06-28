@@ -606,14 +606,14 @@ export default function Home() {
                 </div>
                 {/* 文字 */}
                 <div className="p-3">
-                  <h4 className="font-black text-sm leading-tight mb-0.5" style={{ color: '#1E3A5F' }}>{room.name}</h4>
-                  <p className="text-xs mb-2 leading-relaxed" style={{ color: '#4A7FA5' }}>{room.desc}</p>
+                  <h4 className="font-black text-base leading-tight mb-1" style={{ color: '#1E3A5F' }}>{room.name}</h4>
+                  <p className="text-sm mb-2 leading-relaxed" style={{ color: '#4A7FA5' }}>{room.desc}</p>
                   <div className="flex flex-wrap gap-1">
                     {room.tags.map(tag => (
-                      <span key={tag} className="text-xs px-1.5 py-0.5 rounded font-medium" style={{ background: '#E0F2FE', color: '#1E3A5F' }}>{tag}</span>
+                      <span key={tag} className="text-sm px-2 py-0.5 rounded font-medium" style={{ background: '#E0F2FE', color: '#1E3A5F' }}>{tag}</span>
                     ))}
                     {room.extra && (
-                      <span className="text-xs px-1.5 py-0.5 rounded font-bold" style={{ background: '#FEF3C7', color: '#B45309' }}>{room.extra}</span>
+                      <span className="text-sm px-2 py-0.5 rounded font-bold" style={{ background: '#FEF3C7', color: '#B45309' }}>{room.extra}</span>
                     )}
                   </div>
                 </div>
