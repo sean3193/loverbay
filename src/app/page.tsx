@@ -600,8 +600,12 @@ export default function Home() {
               },
             ].map((room, i) => (
               <div key={i} className={`flex bg-white border-x border-b border-gray-100 overflow-hidden ${i === 0 ? 'rounded-t-xl border-t' : ''} ${i === 3 ? 'rounded-b-xl' : ''}`}>
-                {/* 左側：樓層 + 文字 */}
-                <div className="flex gap-3 p-5 flex-1 items-center min-w-0">
+                {/* 左側：照片貼齊邊緣 */}
+                <div className="relative flex-shrink-0 w-32 md:w-56" style={{ minHeight: '140px' }}>
+                  <Image src={`${BASE}/photos/${room.photo}`} alt={room.name} fill className="object-cover" />
+                </div>
+                {/* 右側：樓層 + 文字 */}
+                <div className="flex gap-3 p-4 flex-1 items-center min-w-0">
                   <div className="flex-shrink-0 w-10 text-center">
                     <div className="text-lg font-black" style={{ color: '#C87941' }}>{room.floor}</div>
                     <div className="text-xs mt-0.5" style={{ color: '#9CB3C9' }}>{room.floorLabel}</div>
@@ -621,10 +625,6 @@ export default function Home() {
                       )}
                     </div>
                   </div>
-                </div>
-                {/* 右側：照片貼齊邊緣 */}
-                <div className="relative flex-shrink-0 w-32 md:w-52">
-                  <Image src={`${BASE}/photos/${room.photo}`} alt={room.name} fill className="object-cover" />
                 </div>
               </div>
             ))}
