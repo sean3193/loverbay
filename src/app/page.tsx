@@ -569,6 +569,112 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── 4b. 空間詳細介紹 ── */}
+      <section id="spaces-detail" className="py-24 px-[5%]" style={{ background: '#FAFAF8' }}>
+        {/* 01 聚會空間 */}
+        <div className="mb-16">
+          <div className="flex flex-wrap items-baseline gap-3 mb-3">
+            <span className="text-4xl font-black" style={{ color: '#D4A882' }}>01</span>
+            <h3 className="text-2xl font-black" style={{ color: '#1E3A5F' }}>聚會空間</h3>
+            <span className="ml-auto text-sm font-bold tracking-widest" style={{ color: '#9CB3C9' }}>2F · GATHERING</span>
+          </div>
+          <p className="mb-6 leading-relaxed max-w-2xl" style={{ color: '#4A7FA5' }}>客廳、中島廚房，加上一張適合大家圍坐聚餐、喝酒聊天的長木桌——這裡是整棟動線的心臟，時光怎麼過，由你們自在決定。</p>
+          <div className="grid grid-cols-2 gap-3">
+            <div className="relative rounded-xl overflow-hidden" style={{ height: '220px' }}>
+              <Image src={`${BASE}/photos/客廳1.webp`} alt="客廳一隅" fill className="object-cover" />
+              <span className="absolute bottom-2 left-2 text-xs text-white px-2 py-0.5 rounded" style={{ background: 'rgba(0,0,0,0.45)' }}>客廳一隅</span>
+            </div>
+            <div className="relative rounded-xl overflow-hidden" style={{ height: '220px' }}>
+              <Image src={`${BASE}/photos/kitchen.jpg`} alt="中島廚房・長木桌" fill className="object-cover" />
+              <span className="absolute bottom-2 left-2 text-xs text-white px-2 py-0.5 rounded" style={{ background: 'rgba(0,0,0,0.45)' }}>中島廚房・長木桌</span>
+            </div>
+          </div>
+        </div>
+
+        {/* 02 獨立休息空間 */}
+        <div>
+          <div className="flex flex-wrap items-baseline gap-3 mb-6">
+            <span className="text-4xl font-black" style={{ color: '#D4A882' }}>02</span>
+            <h3 className="text-2xl font-black" style={{ color: '#1E3A5F' }}>獨立休息空間</h3>
+            <span className="ml-auto text-sm" style={{ color: '#9CB3C9' }}>適合 9～12 人的空間配置</span>
+          </div>
+
+          <div className="flex flex-col gap-4 mb-8">
+            {/* 3F 海景 */}
+            {[
+              {
+                floor: '3F', floorLabel: '三樓',
+                name: '海景專屬空間', sub: '外連看海露台',
+                desc: '窗外即是情人灣海景，推門就是露台，海風直接吹進房裡。',
+                tags: ['一大床','電視','獨立衛浴'],
+                extra: '+沙發床・多睡2位好友',
+                photo: '海景床.webp',
+              },
+              {
+                floor: '2F', floorLabel: '二樓',
+                name: '靜謐單人空間', sub: '溫馨獨立小角落',
+                desc: '安靜的小角落，適合一個人放空，也適合三五旅伴窩著談心。',
+                tags: ['一小床'],
+                extra: '+沙發床・多個旅伴剛剛好',
+                photo: '單人房全景.webp',
+              },
+              {
+                floor: '1F', floorLabel: '一樓',
+                name: '舒活專屬空間', sub: '環境安靜舒適',
+                desc: '採光與氣圍都很舒服，適合喜歡安靜睡眠品質的旅人。',
+                tags: ['一大床','獨立衛浴'],
+                extra: '',
+                photo: '雙人房.jpg',
+              },
+              {
+                floor: '1F', floorLabel: '一樓',
+                name: '寬敞四人空間', sub: '空間寬敞・適合聊天',
+                desc: '空間最為開闊，多人同住也不擁擠，聊到深夜也舒服。',
+                tags: ['兩大床','電視'],
+                extra: '',
+                photo: '四人房床.jpg',
+              },
+            ].map((room, i) => (
+              <div key={i} className="flex gap-4 bg-white border border-gray-100 rounded-xl p-4 shadow-sm items-start">
+                <div className="flex-shrink-0 w-12 text-center pt-1">
+                  <div className="text-base font-black" style={{ color: '#C87941' }}>{room.floor}</div>
+                  <div className="text-xs mt-0.5" style={{ color: '#9CB3C9' }}>{room.floorLabel}</div>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-center gap-2 mb-1">
+                    <h4 className="font-black text-base" style={{ color: '#1E3A5F' }}>{room.name}</h4>
+                    <span className="text-xs" style={{ color: '#9CB3C9' }}>{room.sub}</span>
+                  </div>
+                  <p className="text-sm mb-2 leading-relaxed" style={{ color: '#4A7FA5' }}>{room.desc}</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {room.tags.map(tag => (
+                      <span key={tag} className="text-xs px-2 py-0.5 rounded font-medium" style={{ background: '#E0F2FE', color: '#1E3A5F' }}>{tag}</span>
+                    ))}
+                    {room.extra && (
+                      <span className="text-xs px-2 py-0.5 rounded font-bold" style={{ background: '#FEF3C7', color: '#B45309' }}>{room.extra}</span>
+                    )}
+                  </div>
+                </div>
+                <div className="relative flex-shrink-0 rounded-lg overflow-hidden" style={{ width: '80px', height: '80px' }}>
+                  <Image src={`${BASE}/photos/${room.photo}`} alt={room.name} fill className="object-cover" />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* 人數說明 */}
+          <div className="flex gap-5 rounded-xl p-6 items-start" style={{ background: '#1E3A5F' }}>
+            <div className="text-center flex-shrink-0">
+              <div className="text-4xl font-black" style={{ color: '#FFF3B0' }}>12</div>
+              <div className="text-xs text-white/70 mt-1">人數上限</div>
+            </div>
+            <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.85)' }}>
+              本空間基礎配置適合 9 位，全棟最多可彈性調整至 12 位（總人數上限 12 位）。加床為功能型沙發床，躺感較紮實，不像標準床墊那麼柔軟，這部分請依照您的需求彈性安排喔。
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── 7. 預約表單 ── */}
       <section id="booking" className="py-24 px-[5%]" style={{ background: 'linear-gradient(160deg, #e0f7ff 0%, #bae6fd 50%, #e0f2fe 100%)' }}>
         <p className="text-xs font-bold tracking-[0.3em] uppercase mb-3" style={{ color: '#0EA5E9' }}>Reservation</p>
