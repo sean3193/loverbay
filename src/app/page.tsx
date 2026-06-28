@@ -563,7 +563,7 @@ export default function Home() {
             <span className="ml-auto text-sm" style={{ color: '#9CB3C9' }}>適合 9～12 人的空間配置</span>
           </div>
 
-          <div className="flex flex-col gap-2 mb-8">
+          <div className="flex flex-col gap-0 mb-8">
             {/* 3F 海景 */}
             {[
               {
@@ -599,7 +599,7 @@ export default function Home() {
                 photo: '四人房床.jpg',
               },
             ].map((room, i) => (
-              <div key={i} className="flex gap-4 bg-white border border-gray-100 rounded-xl p-5 shadow-sm items-center">
+              <div key={i} className={`flex gap-4 bg-white border-x border-b border-gray-100 p-5 shadow-sm items-center ${i === 0 ? 'rounded-t-xl border-t' : ''} ${i === 3 ? 'rounded-b-xl' : ''}`}>
                 <div className="flex-shrink-0 w-14 text-center">
                   <div className="text-xl font-black" style={{ color: '#C87941' }}>{room.floor}</div>
                   <div className="text-sm mt-0.5" style={{ color: '#9CB3C9' }}>{room.floorLabel}</div>
@@ -619,7 +619,7 @@ export default function Home() {
                     )}
                   </div>
                 </div>
-                <div className="relative flex-shrink-0 rounded-lg overflow-hidden" style={{ width: '160px', height: '160px' }}>
+                <div className="relative flex-shrink-0 rounded-lg overflow-hidden" style={{ width: '200px', height: '200px' }}>
                   <Image src={`${BASE}/photos/${room.photo}`} alt={room.name} fill className="object-cover" />
                 </div>
               </div>
