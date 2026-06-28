@@ -418,7 +418,6 @@ export default function Home() {
           {([
             { key: 'about', href: 'about' },
             { key: 'spaces', href: 'gallery' },
-            { key: 'pricing', href: 'pricing' },
             { key: 'booking', href: 'booking' },
             { key: 'transport', href: 'transport' },
           ]).map(({ key, href }) => (
@@ -567,72 +566,6 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ── 5. 價格方案 ── */}
-      <section id="pricing" className="py-24 px-[5%]">
-        <p className="text-xs font-bold tracking-[0.3em] uppercase mb-3" style={{ color: '#0EA5E9' }}>Pricing</p>
-        <h2 className="font-black mb-3" style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', color: '#1E3A5F' }}>{t('pricing.title')}</h2>
-        <p className="mb-10 max-w-xl" style={{ color: '#4A7FA5' }}>{t('pricing.desc')}</p>
-        <div className="grid md:grid-cols-3 gap-5 mb-8">
-          {[
-            { type: 'WEEKDAY', k: 'p.weekday', sub: 'p.weekday.sub', note: 'p.weekday.note', featured: false },
-            { type: 'WEEKEND', k: 'p.weekend', sub: 'p.weekend.sub', note: 'p.weekend.note', featured: true },
-            { type: 'HOLIDAY', k: 'p.holiday', sub: 'p.holiday.sub', note: 'p.holiday.note', featured: false },
-          ].map((card, i) => (
-            <div key={i} className={`relative border rounded-xl p-8 text-center ${card.featured ? 'pricing-featured text-white' : 'border-gray-200'}`}>
-              {card.featured && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-white text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap" style={{ background: '#F59E0B' }}>
-                  {t('p.badge')}
-                </span>
-              )}
-              <p className="text-sm font-bold tracking-widest mb-2" style={{ color: card.featured ? '#FFF3B0' : '#0EA5E9' }}>{card.type}</p>
-              <h3 className="text-xl font-black mb-1">{t(card.k)}</h3>
-              <p className="text-base mb-6 opacity-70">{t(card.sub)}</p>
-              <div className="text-4xl font-black mb-1" style={{ color: card.featured ? '#FFF3B0' : '#0EA5E9' }}>
-                <sup className="text-lg">NT$</sup>●●●●<sub className="text-base opacity-60">{t('p.day')}</sub>
-              </div>
-              <p className="text-sm mt-5 leading-relaxed opacity-70">{t(card.note)}</p>
-            </div>
-          ))}
-        </div>
-        <div className="rounded-xl overflow-hidden border border-gray-200">
-          <table className="sr-table w-full border-collapse text-base">
-            <thead>
-              <tr>
-                <th className="text-left p-3">{t('sr.type')}</th>
-                <th className="text-left p-3">{t('sr.period')}</th>
-                <th className="text-left p-3">{t('sr.note')}</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[['sr.r1','sr.r1p','sr.r1n'],['sr.r2','sr.r2p','sr.r2n'],['sr.r3','sr.r3p','sr.r3n'],['sr.r4','sr.r4p','sr.r4n']].map((row, i) => (
-                <tr key={i}>
-                  {row.map((k, j) => <td key={j} className="p-3 border-b border-gray-100">{t(k)}</td>)}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      {/* ── 6. 行事曆 ── */}
-      <section id="calendar" className="py-24 px-[5%]" style={{ background: '#FFF8EE' }}>
-        <p className="text-xs font-bold tracking-[0.3em] uppercase mb-3" style={{ color: '#0EA5E9' }}>Availability</p>
-        <h2 className="font-black mb-3" style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', color: '#1E3A5F' }}>{t('cal.title')}</h2>
-        <p className="mb-8" style={{ color: '#4A7FA5' }}>{t('cal.desc')}</p>
-        <div className="border-2 border-dashed border-blue-200 rounded-xl h-80 flex flex-col items-center justify-center gap-3" style={{ color: '#9CB3C9' }}>
-          <span className="text-5xl">📅</span>
-          <p className="text-sm">{t('cal.ph')}</p>
-        </div>
-        <div className="flex gap-6 mt-5 flex-wrap">
-          {[['dot-green', '#4caf50', 'cal.a'],['dot-red', '#e53935', 'cal.f'],['dot-gray', '#9e9e9e', 'cal.p']].map(([, color, key]) => (
-            <div key={key} className="flex items-center gap-2 text-sm" style={{ color: '#555' }}>
-              <span className="w-3 h-3 rounded-full" style={{ background: color }} />
-              {t(key)}
-            </div>
-          ))}
         </div>
       </section>
 
@@ -867,7 +800,6 @@ export default function Home() {
             <ul className="list-none flex flex-col gap-2">
               {[
                 ['#about', 'nav.about'], ['#spaces', 'nav.spaces'],
-                ['#pricing', 'nav.pricing'], ['#calendar', 'cal.title'],
                 ['#booking', 'hero.book'],
               ].map(([href, key]) => (
                 <li key={key}><a href={href} className="text-sm no-underline transition-colors hover:text-[#7DD3FC]" style={{ color: 'rgba(255,255,255,.5)' }}>{t(key)}</a></li>
