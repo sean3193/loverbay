@@ -549,8 +549,8 @@ export default function Home() {
               <span className="absolute bottom-2 left-2 text-xs text-white px-2 py-0.5 rounded" style={{ background: 'rgba(0,0,0,0.45)' }}>客廳一隅</span>
             </div>
             <div className="relative rounded-xl overflow-hidden" style={{ height: '220px' }}>
-              <Image src={`${BASE}/photos/kitchen.jpg`} alt="中島廚房・長木桌" fill className="object-cover" />
-              <span className="absolute bottom-2 left-2 text-xs text-white px-2 py-0.5 rounded" style={{ background: 'rgba(0,0,0,0.45)' }}>中島廚房・長木桌</span>
+              <Image src={`${BASE}/photos/kitchen_dining.jpg`} alt="中島餐桌" fill className="object-cover" />
+              <span className="absolute bottom-2 left-2 text-xs text-white px-2 py-0.5 rounded" style={{ background: 'rgba(0,0,0,0.45)' }}>中島餐桌</span>
             </div>
           </div>
         </div>
