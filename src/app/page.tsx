@@ -640,7 +640,44 @@ export default function Home() {
         <h2 className="font-black mb-3" style={{ fontSize: 'clamp(1.6rem,3vw,2.4rem)', color: '#1E3A5F' }}>{t('book.title')}</h2>
         <p className="mb-10" style={{ color: '#4A7FA5' }}>{t('book.desc')}</p>
         <div className="grid lg:grid-cols-2 gap-8 items-start">
-          {/* 左欄：表單 */}
+          {/* 左欄：LINE 快速預約 + 注意事項 */}
+          <div className="flex flex-col gap-5">
+            {/* LINE 卡片 */}
+            <div className="rounded-2xl p-6 text-white text-center shadow-md" style={{ background: 'linear-gradient(135deg, #06C755, #04a344)' }}>
+              <div className="text-4xl mb-3">💬</div>
+              <h3 className="font-black text-lg mb-2">{t('line.book.title')}</h3>
+              <p className="text-base mb-4 opacity-90">{t('line.book.desc')}</p>
+              <a
+                href={LINE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full bg-white font-black text-base py-3 rounded-lg no-underline hover:opacity-90 transition-opacity"
+                style={{ color: '#06C755' }}
+              >
+                {t('line.book.btn')}
+              </a>
+              <p className="text-base mt-3 opacity-80">{t('line.book.id')}<strong>{LINE_ID}</strong></p>
+            </div>
+
+            {/* 預約說明 */}
+            <div className="rounded-2xl p-6 bg-white shadow-md">
+              <h4 className="font-bold text-sm mb-4" style={{ color: '#1E3A5F' }}>📋 預約注意事項</h4>
+              {[
+                { icon: '⏰', text: '送出表單後 24 小時內確認回覆' },
+                { icon: '💳', text: '確認後將提供付款方式，完成訂金即完成預約' },
+                { icon: '👥', text: '本空間配置最適合 9～12 人' },
+                { icon: '🐾', text: '如有寵物或特殊需求，請於備註說明' },
+                { icon: '📵', text: '如需變更或取消行程，建議直接加 LINE 洽詢專人' },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-2 items-start mb-3 last:mb-0">
+                  <span className="flex-shrink-0">{item.icon}</span>
+                  <p className="text-sm leading-relaxed" style={{ color: '#4A7FA5' }}>{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 右欄：表單 */}
           <div className="bg-white rounded-2xl p-8 shadow-md">
             <div className="grid md:grid-cols-2 gap-5 mb-5">
               <div>
@@ -692,42 +729,6 @@ export default function Home() {
             <p className="text-center text-xs mt-4 leading-relaxed" style={{ color: '#888' }}>{t('f.note')}</p>
           </div>
 
-          {/* 右欄：LINE 快速預約 + 注意事項 */}
-          <div className="flex flex-col gap-5">
-            {/* LINE 卡片 */}
-            <div className="rounded-2xl p-6 text-white text-center shadow-md" style={{ background: 'linear-gradient(135deg, #06C755, #04a344)' }}>
-              <div className="text-4xl mb-3">💬</div>
-              <h3 className="font-black text-lg mb-2">{t('line.book.title')}</h3>
-              <p className="text-base mb-4 opacity-90">{t('line.book.desc')}</p>
-              <a
-                href={LINE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full bg-white font-black text-base py-3 rounded-lg no-underline hover:opacity-90 transition-opacity"
-                style={{ color: '#06C755' }}
-              >
-                {t('line.book.btn')}
-              </a>
-              <p className="text-base mt-3 opacity-80">{t('line.book.id')}<strong>{LINE_ID}</strong></p>
-            </div>
-
-            {/* 預約說明 */}
-            <div className="rounded-2xl p-6 bg-white shadow-md">
-              <h4 className="font-bold text-sm mb-4" style={{ color: '#1E3A5F' }}>📋 預約注意事項</h4>
-              {[
-                { icon: '⏰', text: '送出表單後 24 小時內確認回覆' },
-                { icon: '💳', text: '確認後將提供付款方式，完成訂金即完成預約' },
-                { icon: '👥', text: '本空間配置最適合 9～12 人' },
-                { icon: '🐾', text: '如有寵物或特殊需求，請於備註說明' },
-                { icon: '📵', text: '如需變更或取消行程，建議直接加 LINE 洽詢專人' },
-              ].map((item, i) => (
-                <div key={i} className="flex gap-2 items-start mb-3 last:mb-0">
-                  <span className="flex-shrink-0">{item.icon}</span>
-                  <p className="text-sm leading-relaxed" style={{ color: '#4A7FA5' }}>{item.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
