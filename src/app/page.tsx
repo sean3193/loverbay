@@ -571,7 +571,7 @@ export default function Home() {
                 desc: '窗外即是情人灣海景，推門就是露台，海風直接吹進房裡。',
                 tags: ['一大床','電視','獨立衛浴'],
                 extra: '+沙發床・多睡2位好友',
-                photo: '海景床.webp',
+                photo: 'seaview-full.jpg',
               },
               {
                 floor: '2F', floorLabel: '二樓',
