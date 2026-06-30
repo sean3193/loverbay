@@ -78,6 +78,8 @@ const T: Record<Lang, Record<string, string>> = {
     's6.n': '羅東夜市', 's6.d': '宜蘭夜間美食天堂，臭豆腐、蔥油餅、烤鴨應有盡有', 's6.dist': '約 25 分鐘車程',
     's7.n': '南方澳觀景台', 's7.d': '居高臨下俯瞰南方澳漁港與太平洋，夕陽時分景色醉人，是南方澳必訪打卡點', 's7.dist': '約 10 分鐘步行',
     's8.n': '七星嶺步道', 's8.d': '蘇澳最美健行步道，沿途七個觀景平台可遠眺龜山島、蘭陽平原與太平洋', 's8.dist': '約 10 分鐘車程',
+    's9.n': '賊仔澳玻璃海灘', 's9.d': '海浪將碎玻璃磨成圓潤砂礫，陽光下閃閃發光，隱藏版秘境海灘', 's9.dist': '約 15 分鐘車程',
+    's10.n': '南方澳魚市場', 's10.d': '產地直送現流海鮮，感受漁港最道地的活力與人情味', 's10.dist': '約 10 分鐘車程',
     'tr.title': '怎麼來找我們',
     't1.n': '自駕', 't1.d': '走國道 5 號至終點「蘇澳交流道」下，循台9丙線往南方澳方向，過跨海大橋後依 Google Maps 導航「情人灣停車場」即可抵達。提供免費停車位。',
     't2.n': '火車 + 公車', 't2.d': '搭乘台鐵至「蘇澳新站」，再步行約15分鐘；或於車站轉乘宜蘭公車【綠28】（蘇澳─南方澳環線），於「南方澳大橋」站下車步行約5分鐘即可抵達。票價：現金20元／悠遊卡15元，約每20–30分鐘一班。',
@@ -164,6 +166,8 @@ const T: Record<Lang, Record<string, string>> = {
     's6.n': 'Luodong Night Market', 's6.d': 'Yilan\'s most famous night market packed with street food delights', 's6.dist': '~25 min drive',
     's7.n': 'Nanfang\'ao Observation Deck', 's7.d': 'Panoramic overlook of the fishing port and Pacific Ocean — magical at golden hour', 's7.dist': '~10 min walk',
     's8.n': 'Qixingling Hiking Trail', 's8.d': 'Seven scenic platforms with sweeping views of Guishan Island, Lanyang Plain, and the ocean', 's8.dist': '~10 min drive',
+    's9.n': 'Zeiziao Glass Beach', 's9.d': 'Waves have polished sea glass into smooth, glittering sand — a hidden gem beach', 's9.dist': '~15 min drive',
+    's10.n': 'Nanfang\'ao Fish Market', 's10.d': 'Fresh-off-the-boat seafood straight from the harbor — taste the local fishing life', 's10.dist': '~10 min drive',
     'tr.title': 'Getting Here',
     't1.n': 'Self-Drive', 't1.d': 'Take National Freeway 5 to the last exit "Suao Interchange", follow Rt. 9C toward Nanfang\'ao, cross the Nanfang\'ao Bridge, then navigate to "情人灣停車場 (Lovers Bay Parking)". Free parking available.',
     't2.n': 'Train + Bus', 't2.d': 'Take TRA to "Suao New Station", then walk ~15 min or transfer to Green Route 28 bus (Suao–Nanfang\'ao loop) and alight at "Nanfang\'ao Bridge" stop (~5 min walk). Fare: NT$20 cash / NT$15 EasyCard. Buses run every 20–30 min.',
@@ -250,6 +254,8 @@ const T: Record<Lang, Record<string, string>> = {
     's6.n': '羅東ナイトマーケット', 's6.d': '宜蘭を代表するナイトマーケット、地元グルメが勢ぞろい', 's6.dist': '車で約25分',
     's7.n': '南方澳展望台', 's7.d': '漁港と太平洋を一望できる展望台。夕暮れ時は息をのむ絶景が広がります', 's7.dist': '徒歩約10分',
     's8.n': '七星嶺ハイキングコース', 's8.d': '7つの展望スポットから亀山島・蘭陽平原・太平洋を見渡す蘇澳随一のトレイル', 's8.dist': '車で約10分',
+    's9.n': '賊仔澳ガラスビーチ', 's9.d': '波に磨かれたガラス片が砂浜できらきら輝く隠れた絶景スポット', 's9.dist': '車で約15分',
+    's10.n': '南方澳魚市場', 's10.d': '港直送の新鮮な海の幸、漁港ならではの活気を体感できます', 's10.dist': '車で約10分',
     'tr.title': 'アクセス方法',
     't1.n': '自家用車', 't1.d': '国道5号の終点「蘇澳IC」を降り、台9丙線を南方澳方面へ。南方澳大橋を渡り「情人灣停車場」でナビ設定。無料駐車場完備。',
     't2.n': '電車 + バス', 't2.d': '台鉄「蘇澳新駅」下車後、徒歩約15分。またはグリーン28バス（蘇澳─南方澳環線）に乗り「南方澳大橋」停留所で下車（徒歩約5分）。運賃：現金20元／ICカード15元、約20〜30分間隔で運行。',
@@ -336,6 +342,8 @@ const T: Record<Lang, Record<string, string>> = {
     's6.n': '뤄둥 야시장', 's6.d': '이란 최대 야시장, 현지 길거리 음식이 가득한 미식 천국', 's6.dist': '차로 약 25분',
     's7.n': '난팡아오 전망대', 's7.d': '어항과 태평양을 내려다보는 전망대. 황금빛 석양이 물드는 시간이 특히 아름답습니다', 's7.dist': '도보 약 10분',
     's8.n': '치싱링 하이킹 코스', 's8.d': '7개의 전망 포인트에서 구이산섬, 란양평원, 태평양을 한눈에 볼 수 있는 쑤아오 최고의 트레일', 's8.dist': '차로 약 10분',
+    's9.n': '제이짜오 글래스비치', 's9.d': '파도에 깎인 유리 조각이 모래사장에서 반짝이는 숨은 비밀 해변', 's9.dist': '차로 약 15분',
+    's10.n': '난팡아오 어시장', 's10.d': '항구에서 바로 잡아온 신선한 해산물, 생생한 어항의 활기를 느낄 수 있는 곳', 's10.dist': '차로 약 10분',
     'tr.title': '오시는 방법',
     't1.n': '자가용', 't1.d': '국도 5호선 종점 「쑤아오 IC」에서 내려 대만 9丙선을 따라 난팡아오 방면으로 진행. 난팡아오 대교를 건너 「情人灣停車場」으로 내비게이션. 무료 주차 가능.',
     't2.n': '기차 + 버스', 't2.d': '대만철도 「쑤아오 신역」 하차 후 도보 약 15분. 또는 그린 28번 버스（쑤아오─난팡아오 순환선）로 「난팡아오 대교」 정류장 하차 후 도보 약 5분. 요금: 현금 20위안 / 교통카드 15위안, 약 20~30분 간격 운행.',
@@ -747,13 +755,17 @@ export default function Home() {
             { n: 's6.n', d: 's6.d', dist: 's6.dist', photo: 'https://upload.wikimedia.org/wikipedia/commons/6/6c/2014-01-29_Luodong_Night_Market_01.jpg', credit: 'tomscoffin / Wikimedia Commons (CC BY 2.0)' },
             { n: 's7.n', d: 's7.d', dist: 's7.dist', photo: 'https://upload.wikimedia.org/wikipedia/commons/3/3a/%E5%8D%97%E6%96%B9%E6%BE%B3%E8%A7%80%E6%99%AF%E5%8F%B0.jpg', credit: '莊文生等／宜蘭縣政府文化局 (CC BY 3.0 TW)' },
             { n: 's8.n', d: 's8.d', dist: 's8.dist', photo: 'https://upload.wikimedia.org/wikipedia/commons/0/0f/%E4%B8%83%E6%98%9F%E5%B6%BA%E6%AD%A5%E9%81%93.jpg', credit: '莊文生等／宜蘭縣政府文化局 (CC BY 3.0 TW)' },
+            { n: 's9.n', d: 's9.d', dist: 's9.dist', photo: `${BASE}/photos/loverbay-sky.jpg`, credit: '' },
+            { n: 's10.n', d: 's10.d', dist: 's10.dist', photo: `${BASE}/photos/loverbay-sky.jpg`, credit: '' },
           ].map((s, i) => (
             <div key={i} className="border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="relative h-40 overflow-hidden">
                 <img src={s.photo} alt={t(s.n)} className="w-full h-full object-cover" loading="lazy" />
-                <span className="absolute bottom-1 right-1 text-white px-1.5 py-0.5 rounded" style={{ fontSize: '0.6rem', background: 'rgba(0,0,0,0.5)' }}>
-                  © {s.credit}
-                </span>
+                {s.credit && (
+                  <span className="absolute bottom-1 right-1 text-white px-1.5 py-0.5 rounded" style={{ fontSize: '0.6rem', background: 'rgba(0,0,0,0.5)' }}>
+                    © {s.credit}
+                  </span>
+                )}
               </div>
               <div className="p-4">
                 <h4 className="font-bold text-base mb-1" style={{ color: '#1E3A5F' }}>{t(s.n)}</h4>
