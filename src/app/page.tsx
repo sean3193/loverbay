@@ -747,7 +747,7 @@ export default function Home() {
         <p className="mb-10" style={{ color: '#4A7FA5' }}>{t('spots.desc')}</p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
-            { n: 's9.n', d: 's9.d', dist: 's9.dist', photo: `${BASE}/photos/loverbay-sky.jpg`, credit: '' },
+            { n: 's9.n', d: 's9.d', dist: 's9.dist', photo: `${BASE}/photos/glass-beach.jpg`, credit: '' },
             { n: 's3.n', d: 's3.d', dist: 's3.dist', photo: 'https://upload.wikimedia.org/wikipedia/commons/0/07/Su%27Ao%27s_Tofu_Cape_from_above.jpg', credit: 'Bob Tan / Wikimedia Commons (CC BY 4.0)' },
             { n: 's1.n', d: 's1.d', dist: 's1.dist', photo: 'https://upload.wikimedia.org/wikipedia/commons/5/54/Su%27Ao%27s_Nanfangao_Port_from_above.jpg', credit: 'Bob Tan / Wikimedia Commons (CC BY 4.0)' },
             { n: 's2.n', d: 's2.d', dist: 's2.dist', photo: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Taiwan_SuAo_Cold_Spring.JPG', credit: 'Vegafish / Wikimedia Commons (CC BY-SA 2.5)' },
