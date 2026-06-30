@@ -375,6 +375,7 @@ const GALLERY = [
   { src: `${BASE}/photos/aerial-coast.webp`,  alt: '海岸全景',   label: 'gallery.label1',  cls: 'gallery-big' },
   { src: `${BASE}/photos/loverbay-sky.jpg`,   alt: '情人灣藍天', label: 'gallery.label11', cls: 'gallery-big' },
   { src: `${BASE}/photos/balcony-night.webp`, alt: '海風慢活露台', label: 'gallery.label2',  cls: '' },
+  { src: `${BASE}/photos/balcony-night-sky.jpg`, alt: '露台星空', label: 'gallery.label12', cls: '' },
   { src: `${BASE}/photos/balcony-4.jpg`,      alt: '戶外陽台',   label: 'gallery.label3',  cls: 'gallery-wide' },
   { src: `${BASE}/photos/seaview-living.jpg`, alt: '海景客廳',   label: 'gallery.label4',  cls: '' },
   { src: `${BASE}/photos/seaview-bed.webp`,   alt: '海景臥室',   label: 'gallery.label5',  cls: '' },
@@ -385,10 +386,10 @@ const GALLERY = [
   { src: `${BASE}/photos/room-single.webp`,   alt: '單人房',     label: 'gallery.label10', cls: '' },
 ]
 const GALLERY_LABELS: Record<Lang, Record<string, string>> = {
-  zh: { 'gallery.label1': '海岸全景', 'gallery.label2': '海風慢活露台', 'gallery.label3': '海風慢活露台', 'gallery.label4': '交流交誼廳', 'gallery.label5': '三樓·全景聽海舒壓空間', 'gallery.label6': '二樓·多功能共享中島空間', 'gallery.label7': '一樓·獨立休憩空間', 'gallery.label8': '一樓·獨立休憩空間', 'gallery.label9': '獨立衛浴空間', 'gallery.label10': '二樓·獨立休憩空間', 'gallery.label11': '二樓客廳窗外景觀' },
-  en: { 'gallery.label1': 'Coastal Panorama', 'gallery.label2': 'Ocean Breeze Terrace', 'gallery.label3': 'Ocean Breeze Terrace', 'gallery.label4': 'Social Lounge', 'gallery.label5': '3F · Panoramic Seaview Space', 'gallery.label6': '2F · Shared Island Kitchen', 'gallery.label7': '1F · Independent Retreat', 'gallery.label8': '1F · Independent Retreat', 'gallery.label9': 'Private Bath Suite', 'gallery.label10': '2F · Independent Retreat', 'gallery.label11': '2F Living Room View' },
-  ja: { 'gallery.label1': '海岸パノラマ', 'gallery.label2': '潮風テラス', 'gallery.label3': '潮風テラス', 'gallery.label4': 'ラウンジスペース', 'gallery.label5': '3F・全景シービュースペース', 'gallery.label6': '2F・共有アイランドキッチン', 'gallery.label7': '1F・独立休憩エリア', 'gallery.label8': '1F・独立休憩エリア', 'gallery.label9': 'プライベートバス', 'gallery.label10': '2F・独立休憩エリア', 'gallery.label11': '2階リビングの窓からの眺め' },
-  ko: { 'gallery.label1': '해안 파노라마', 'gallery.label2': '해풍 테라스', 'gallery.label3': '해풍 테라스', 'gallery.label4': '교류 라운지', 'gallery.label5': '3F·파노라마 오션뷰 공간', 'gallery.label6': '2F·공유 아일랜드 키친', 'gallery.label7': '1F·독립 휴식 공간', 'gallery.label8': '1F·독립 휴식 공간', 'gallery.label9': '전용 욕실 공간', 'gallery.label10': '2F·독립 휴식 공간', 'gallery.label11': '2층 거실 창밖 풍경' },
+  zh: { 'gallery.label1': '海岸全景', 'gallery.label2': '海風慢活露台', 'gallery.label3': '海風慢活露台', 'gallery.label4': '交流交誼廳', 'gallery.label5': '三樓·全景聽海舒壓空間', 'gallery.label6': '二樓·多功能共享中島空間', 'gallery.label7': '一樓·獨立休憩空間', 'gallery.label8': '一樓·獨立休憩空間', 'gallery.label9': '獨立衛浴空間', 'gallery.label10': '二樓·獨立休憩空間', 'gallery.label11': '二樓客廳窗外景觀', 'gallery.label12': '露台星空' },
+  en: { 'gallery.label1': 'Coastal Panorama', 'gallery.label2': 'Ocean Breeze Terrace', 'gallery.label3': 'Ocean Breeze Terrace', 'gallery.label4': 'Social Lounge', 'gallery.label5': '3F · Panoramic Seaview Space', 'gallery.label6': '2F · Shared Island Kitchen', 'gallery.label7': '1F · Independent Retreat', 'gallery.label8': '1F · Independent Retreat', 'gallery.label9': 'Private Bath Suite', 'gallery.label10': '2F · Independent Retreat', 'gallery.label11': '2F Living Room View', 'gallery.label12': 'Starlit Terrace' },
+  ja: { 'gallery.label1': '海岸パノラマ', 'gallery.label2': '潮風テラス', 'gallery.label3': '潮風テラス', 'gallery.label4': 'ラウンジスペース', 'gallery.label5': '3F・全景シービュースペース', 'gallery.label6': '2F・共有アイランドキッチン', 'gallery.label7': '1F・独立休憩エリア', 'gallery.label8': '1F・独立休憩エリア', 'gallery.label9': 'プライベートバス', 'gallery.label10': '2F・独立休憩エリア', 'gallery.label11': '2階リビングの窓からの眺め', 'gallery.label12': 'テラスの星空' },
+  ko: { 'gallery.label1': '해안 파노라마', 'gallery.label2': '해풍 테라스', 'gallery.label3': '해풍 테라스', 'gallery.label4': '교류 라운지', 'gallery.label5': '3F·파노라마 오션뷰 공간', 'gallery.label6': '2F·공유 아일랜드 키친', 'gallery.label7': '1F·독립 휴식 공간', 'gallery.label8': '1F·독립 휴식 공간', 'gallery.label9': '전용 욕실 공간', 'gallery.label10': '2F·독립 휴식 공간', 'gallery.label11': '2층 거실 창밖 풍경', 'gallery.label12': '테라스의 별빛 하늘' },
 }
 
 /* ══════════════════════════════════════════
